@@ -120,11 +120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSLoginViewController.m"
-            timestampString = "406482005.281355"
+            timestampString = "406483233.442061"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "-textBeginEdit"
             landmarkType = "5">
          </BreakpointContent>

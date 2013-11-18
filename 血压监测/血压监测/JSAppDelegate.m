@@ -10,6 +10,10 @@
 #import "JSUser.h"
 
 #import "JSMainViewController.h"
+#import "JSFamilyViewController.h"
+#import "JSRemindViewController.h"
+#import "JSAboutViewController.h"
+
 #import "JSLoginViewController.h"
 
 #import "JSTabBarViewController.h"
@@ -24,7 +28,7 @@
     
     if ([JSUser isLogin]) {
         JSTabBarViewController *tabbarVC = [[JSTabBarViewController alloc] init];
-        tabbarVC.viewControllers = @[[[JSMainViewController alloc] init]];
+        tabbarVC.viewControllers = @[[[JSMainViewController alloc] init],[[JSFamilyViewController alloc] init],[[JSRemindViewController alloc] init] ,[[JSAboutViewController alloc] init]];
         self.window.rootViewController = tabbarVC;
     }else{
         JSLoginViewController *loginVC = [[JSLoginViewController alloc] init];

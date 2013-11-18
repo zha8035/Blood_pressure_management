@@ -52,6 +52,9 @@
 		CE79488D183A610900965A56 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE79488C183A610900965A56 /* CFNetwork.framework */; };
 		CE79488F183A612000965A56 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE79488E183A612000965A56 /* libxml2.dylib */; };
 		CE794891183A614800965A56 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE794890183A614800965A56 /* libstdc++.dylib */; };
+		CE794898183A704B00965A56 /* JSFamilyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE794897183A704B00965A56 /* JSFamilyViewController.m */; };
+		CE79489B183A707600965A56 /* JSRemindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE79489A183A707600965A56 /* JSRemindViewController.m */; };
+		CE79489E183A70A800965A56 /* JSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE79489D183A70A800965A56 /* JSAboutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +132,12 @@
 		CE79488C183A610900965A56 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		CE79488E183A612000965A56 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		CE794890183A614800965A56 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		CE794896183A704B00965A56 /* JSFamilyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFamilyViewController.h; sourceTree = "<group>"; };
+		CE794897183A704B00965A56 /* JSFamilyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFamilyViewController.m; sourceTree = "<group>"; };
+		CE794899183A707600965A56 /* JSRemindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRemindViewController.h; sourceTree = "<group>"; };
+		CE79489A183A707600965A56 /* JSRemindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRemindViewController.m; sourceTree = "<group>"; };
+		CE79489C183A70A800965A56 /* JSAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAboutViewController.h; sourceTree = "<group>"; };
+		CE79489D183A70A800965A56 /* JSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAboutViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +314,12 @@
 				CE794840183A0CA000965A56 /* JSMainViewController.m */,
 				CE794868183A575600965A56 /* JSLoginViewController.h */,
 				CE794869183A575600965A56 /* JSLoginViewController.m */,
+				CE794896183A704B00965A56 /* JSFamilyViewController.h */,
+				CE794897183A704B00965A56 /* JSFamilyViewController.m */,
+				CE794899183A707600965A56 /* JSRemindViewController.h */,
+				CE79489A183A707600965A56 /* JSRemindViewController.m */,
+				CE79489C183A70A800965A56 /* JSAboutViewController.h */,
+				CE79489D183A70A800965A56 /* JSAboutViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -458,12 +473,15 @@
 				CE794841183A0CA000965A56 /* JSMainViewController.m in Sources */,
 				CE794859183A2C6C00965A56 /* JSBloodDataCell.m in Sources */,
 				CE794833183A0C1500965A56 /* PNBarChart.m in Sources */,
+				CE79489E183A70A800965A56 /* JSAboutViewController.m in Sources */,
 				CE79483E183A0C7800965A56 /* JSCommonViewController.m in Sources */,
 				CE794832183A0C1500965A56 /* PNBar.m in Sources */,
 				CE79486A183A575600965A56 /* JSLoginViewController.m in Sources */,
 				CE794861183A493100965A56 /* JSPersonBloodData.m in Sources */,
 				CE79485E183A477D00965A56 /* JSBloodData.m in Sources */,
+				CE79489B183A707600965A56 /* JSRemindViewController.m in Sources */,
 				CE79486E183A57A400965A56 /* JSUser.m in Sources */,
+				CE794898183A704B00965A56 /* JSFamilyViewController.m in Sources */,
 				CE794834183A0C1500965A56 /* PNChart.m in Sources */,
 				CE794856183A279B00965A56 /* JSNavigationViewController.m in Sources */,
 				CE794835183A0C1500965A56 /* PNChartLabel.m in Sources */,

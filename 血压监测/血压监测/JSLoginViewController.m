@@ -8,6 +8,11 @@
 
 #import "JSLoginViewController.h"
 #import "PNColor.h"
+#import "JSTabBarViewController.h"
+#import "JSMainViewController.h"
+#import "JSFamilyViewController.h"
+#import "JSRemindViewController.h"
+#import "JSAboutViewController.h"
 @interface JSLoginViewController ()
 {
     float posiY;
@@ -77,7 +82,9 @@
         [alert show];
         return;
     }
-    
+    JSTabBarViewController *tabbarVC = [[JSTabBarViewController alloc] init];
+    tabbarVC.viewControllers = @[[[JSMainViewController alloc] init],[[JSFamilyViewController alloc] init],[[JSRemindViewController alloc] init] ,[[JSAboutViewController alloc] init]];
+    [self presentViewController:tabbarVC animated:YES completion:nil];
 }
 -(void)registerButtonClick
 {

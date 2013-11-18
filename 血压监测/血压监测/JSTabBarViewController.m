@@ -144,6 +144,7 @@
         
         UILabel *lab= [[ UILabel alloc] initWithFrame:CGRectMake(25, 15, 50, 25)];
         lab.textColor = [UIColor whiteColor];
+        lab.backgroundColor = [UIColor clearColor];
         lab.text = [tabTitles objectAtIndex:i];
         lab.font = [UIFont boldSystemFontOfSize:12];
         lab.layer.cornerRadius = 12.5;
