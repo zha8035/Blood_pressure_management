@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE7947CE183A09BB00965A56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7947CD183A09BB00965A56 /* Foundation.framework */; };
+		CE7947D0183A09BB00965A56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7947CF183A09BB00965A56 /* CoreGraphics.framework */; };
+		CE7947D2183A09BB00965A56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7947D1183A09BB00965A56 /* UIKit.framework */; };
+		CE7947D8183A09BB00965A56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE7947D6183A09BB00965A56 /* InfoPlist.strings */; };
+		CE7947DA183A09BB00965A56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7947D9183A09BB00965A56 /* main.m */; };
+		CE7947DE183A09BB00965A56 /* JSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7947DD183A09BB00965A56 /* JSAppDelegate.m */; };
+		CE7947E0183A09BB00965A56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7947DF183A09BB00965A56 /* Images.xcassets */; };
+		CE7947E7183A09BB00965A56 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7947E6183A09BB00965A56 /* XCTest.framework */; };
+		CE7947E8183A09BB00965A56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7947CD183A09BB00965A56 /* Foundation.framework */; };
+		CE7947E9183A09BB00965A56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7947D1183A09BB00965A56 /* UIKit.framework */; };
+		CE7947F1183A09BB00965A56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE7947EF183A09BB00965A56 /* InfoPlist.strings */; };
+		CE7947F3183A09BB00965A56 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7947F2183A09BB00965A56 /* ____Tests.m */; };
+		CE794824183A09EF00965A56 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE794823183A09EF00965A56 /* QuartzCore.framework */; };
+		CE794832183A0C1500965A56 /* PNBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CE794827183A0C1500965A56 /* PNBar.m */; };
+		CE794833183A0C1500965A56 /* PNBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = CE794829183A0C1500965A56 /* PNBarChart.m */; };
+		CE794834183A0C1500965A56 /* PNChart.m in Sources */ = {isa = PBXBuildFile; fileRef = CE79482B183A0C1500965A56 /* PNChart.m */; };
+		CE794835183A0C1500965A56 /* PNChartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE79482D183A0C1500965A56 /* PNChartLabel.m */; };
+		CE794836183A0C1500965A56 /* PNColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CE79482F183A0C1500965A56 /* PNColor.m */; };
+		CE794837183A0C1500965A56 /* PNLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = CE794831183A0C1500965A56 /* PNLineChart.m */; };
+		CE79483E183A0C7800965A56 /* JSCommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE79483D183A0C7800965A56 /* JSCommonViewController.m */; };
+		CE794841183A0CA000965A56 /* JSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE794840183A0CA000965A56 /* JSMainViewController.m */; };
+		CE794847183A186000965A56 /* JSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE794846183A186000965A56 /* JSTabBarViewController.m */; };
+		CE79484E183A207900965A56 /* top_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE79484D183A207900965A56 /* top_more@2x.png */; };
+		CE794851183A216200965A56 /* menubg.png in Resources */ = {isa = PBXBuildFile; fileRef = CE79484F183A216200965A56 /* menubg.png */; };
+		CE794852183A216200965A56 /* viewbg.png in Resources */ = {isa = PBXBuildFile; fileRef = CE794850183A216200965A56 /* viewbg.png */; };
+		CE794856183A279B00965A56 /* JSNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE794855183A279B00965A56 /* JSNavigationViewController.m */; };
+		CE794859183A2C6C00965A56 /* JSBloodDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE794858183A2C6C00965A56 /* JSBloodDataCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE7947EA183A09BB00965A56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE7947C2183A09BB00965A56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE7947C9183A09BB00965A56;
+			remoteInfo = "血压监测";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE7947CA183A09BB00965A56 /* 血压监测.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "血压监测.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE7947CD183A09BB00965A56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CE7947CF183A09BB00965A56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CE7947D1183A09BB00965A56 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CE7947D5183A09BB00965A56 /* 血压监测-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "血压监测-Info.plist"; sourceTree = "<group>"; };
+		CE7947D7183A09BB00965A56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE7947D9183A09BB00965A56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE7947DB183A09BB00965A56 /* 血压监测-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "血压监测-Prefix.pch"; sourceTree = "<group>"; };
+		CE7947DC183A09BB00965A56 /* JSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAppDelegate.h; sourceTree = "<group>"; };
+		CE7947DD183A09BB00965A56 /* JSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAppDelegate.m; sourceTree = "<group>"; };
+		CE7947DF183A09BB00965A56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CE7947E5183A09BB00965A56 /* 血压监测Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "血压监测Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE7947E6183A09BB00965A56 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CE7947EE183A09BB00965A56 /* 血压监测Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "血压监测Tests-Info.plist"; sourceTree = "<group>"; };
+		CE7947F0183A09BB00965A56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE7947F2183A09BB00965A56 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
+		CE794823183A09EF00965A56 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CE794826183A0C1500965A56 /* PNBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNBar.h; sourceTree = "<group>"; };
+		CE794827183A0C1500965A56 /* PNBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNBar.m; sourceTree = "<group>"; };
+		CE794828183A0C1500965A56 /* PNBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNBarChart.h; sourceTree = "<group>"; };
+		CE794829183A0C1500965A56 /* PNBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNBarChart.m; sourceTree = "<group>"; };
+		CE79482A183A0C1500965A56 /* PNChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNChart.h; sourceTree = "<group>"; };
+		CE79482B183A0C1500965A56 /* PNChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNChart.m; sourceTree = "<group>"; };
+		CE79482C183A0C1500965A56 /* PNChartLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNChartLabel.h; sourceTree = "<group>"; };
+		CE79482D183A0C1500965A56 /* PNChartLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNChartLabel.m; sourceTree = "<group>"; };
+		CE79482E183A0C1500965A56 /* PNColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNColor.h; sourceTree = "<group>"; };
+		CE79482F183A0C1500965A56 /* PNColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNColor.m; sourceTree = "<group>"; };
+		CE794830183A0C1500965A56 /* PNLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNLineChart.h; sourceTree = "<group>"; };
+		CE794831183A0C1500965A56 /* PNLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNLineChart.m; sourceTree = "<group>"; };
+		CE79483C183A0C7800965A56 /* JSCommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCommonViewController.h; sourceTree = "<group>"; };
+		CE79483D183A0C7800965A56 /* JSCommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCommonViewController.m; sourceTree = "<group>"; };
+		CE79483F183A0CA000965A56 /* JSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMainViewController.h; sourceTree = "<group>"; };
+		CE794840183A0CA000965A56 /* JSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMainViewController.m; sourceTree = "<group>"; };
+		CE794845183A186000965A56 /* JSTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTabBarViewController.h; sourceTree = "<group>"; };
+		CE794846183A186000965A56 /* JSTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTabBarViewController.m; sourceTree = "<group>"; };
+		CE79484D183A207900965A56 /* top_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_more@2x.png"; sourceTree = "<group>"; };
+		CE79484F183A216200965A56 /* menubg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubg.png; sourceTree = "<group>"; };
+		CE794850183A216200965A56 /* viewbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewbg.png; sourceTree = "<group>"; };
+		CE794854183A279B00965A56 /* JSNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNavigationViewController.h; sourceTree = "<group>"; };
+		CE794855183A279B00965A56 /* JSNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNavigationViewController.m; sourceTree = "<group>"; };
+		CE794857183A2C6C00965A56 /* JSBloodDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBloodDataCell.h; sourceTree = "<group>"; };
+		CE794858183A2C6C00965A56 /* JSBloodDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBloodDataCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE7947C7183A09BB00965A56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE794824183A09EF00965A56 /* QuartzCore.framework in Frameworks */,
+				CE7947D0183A09BB00965A56 /* CoreGraphics.framework in Frameworks */,
+				CE7947D2183A09BB00965A56 /* UIKit.framework in Frameworks */,
+				CE7947CE183A09BB00965A56 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7947E2183A09BB00965A56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7947E7183A09BB00965A56 /* XCTest.framework in Frameworks */,
+				CE7947E9183A09BB00965A56 /* UIKit.framework in Frameworks */,
+				CE7947E8183A09BB00965A56 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE7947C1183A09BB00965A56 = {
+			isa = PBXGroup;
+			children = (
+				CE794848183A18E200965A56 /* Image */,
+				CE794838183A0C3600965A56 /* common */,
+				CE7947D3183A09BB00965A56 /* 血压监测 */,
+				CE7947EC183A09BB00965A56 /* 血压监测Tests */,
+				CE7947CC183A09BB00965A56 /* Frameworks */,
+				CE7947CB183A09BB00965A56 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE7947CB183A09BB00965A56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE7947CA183A09BB00965A56 /* 血压监测.app */,
+				CE7947E5183A09BB00965A56 /* 血压监测Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE7947CC183A09BB00965A56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE794823183A09EF00965A56 /* QuartzCore.framework */,
+				CE7947CD183A09BB00965A56 /* Foundation.framework */,
+				CE7947CF183A09BB00965A56 /* CoreGraphics.framework */,
+				CE7947D1183A09BB00965A56 /* UIKit.framework */,
+				CE7947E6183A09BB00965A56 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE7947D3183A09BB00965A56 /* 血压监测 */ = {
+			isa = PBXGroup;
+			children = (
+				CE79483B183A0C5C00965A56 /* model */,
+				CE79483A183A0C5300965A56 /* controller */,
+				CE794839183A0C4200965A56 /* view */,
+				CE7947DC183A09BB00965A56 /* JSAppDelegate.h */,
+				CE7947DD183A09BB00965A56 /* JSAppDelegate.m */,
+				CE7947DF183A09BB00965A56 /* Images.xcassets */,
+				CE7947D4183A09BB00965A56 /* Supporting Files */,
+			);
+			path = "血压监测";
+			sourceTree = "<group>";
+		};
+		CE7947D4183A09BB00965A56 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE7947D5183A09BB00965A56 /* 血压监测-Info.plist */,
+				CE7947D6183A09BB00965A56 /* InfoPlist.strings */,
+				CE7947D9183A09BB00965A56 /* main.m */,
+				CE7947DB183A09BB00965A56 /* 血压监测-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE7947EC183A09BB00965A56 /* 血压监测Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CE7947F2183A09BB00965A56 /* ____Tests.m */,
+				CE7947ED183A09BB00965A56 /* Supporting Files */,
+			);
+			path = "血压监测Tests";
+			sourceTree = "<group>";
+		};
+		CE7947ED183A09BB00965A56 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE7947EE183A09BB00965A56 /* 血压监测Tests-Info.plist */,
+				CE7947EF183A09BB00965A56 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE794825183A0C1500965A56 /* PNChart */ = {
+			isa = PBXGroup;
+			children = (
+				CE794826183A0C1500965A56 /* PNBar.h */,
+				CE794827183A0C1500965A56 /* PNBar.m */,
+				CE794828183A0C1500965A56 /* PNBarChart.h */,
+				CE794829183A0C1500965A56 /* PNBarChart.m */,
+				CE79482A183A0C1500965A56 /* PNChart.h */,
+				CE79482B183A0C1500965A56 /* PNChart.m */,
+				CE79482C183A0C1500965A56 /* PNChartLabel.h */,
+				CE79482D183A0C1500965A56 /* PNChartLabel.m */,
+				CE79482E183A0C1500965A56 /* PNColor.h */,
+				CE79482F183A0C1500965A56 /* PNColor.m */,
+				CE794830183A0C1500965A56 /* PNLineChart.h */,
+				CE794831183A0C1500965A56 /* PNLineChart.m */,
+			);
+			path = PNChart;
+			sourceTree = "<group>";
+		};
+		CE794838183A0C3600965A56 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				CE79483C183A0C7800965A56 /* JSCommonViewController.h */,
+				CE79483D183A0C7800965A56 /* JSCommonViewController.m */,
+				CE794854183A279B00965A56 /* JSNavigationViewController.h */,
+				CE794855183A279B00965A56 /* JSNavigationViewController.m */,
+				CE794845183A186000965A56 /* JSTabBarViewController.h */,
+				CE794846183A186000965A56 /* JSTabBarViewController.m */,
+			);
+			name = common;
+			path = "血压监测";
+			sourceTree = "<group>";
+		};
+		CE794839183A0C4200965A56 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CE794825183A0C1500965A56 /* PNChart */,
+				CE794857183A2C6C00965A56 /* JSBloodDataCell.h */,
+				CE794858183A2C6C00965A56 /* JSBloodDataCell.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		CE79483A183A0C5300965A56 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE79483F183A0CA000965A56 /* JSMainViewController.h */,
+				CE794840183A0CA000965A56 /* JSMainViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		CE79483B183A0C5C00965A56 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		CE794848183A18E200965A56 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				CE79484F183A216200965A56 /* menubg.png */,
+				CE794850183A216200965A56 /* viewbg.png */,
+				CE79484D183A207900965A56 /* top_more@2x.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE7947C9183A09BB00965A56 /* 血压监测 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE7947F6183A09BB00965A56 /* Build configuration list for PBXNativeTarget "血压监测" */;
+			buildPhases = (
+				CE7947C6183A09BB00965A56 /* Sources */,
+				CE7947C7183A09BB00965A56 /* Frameworks */,
+				CE7947C8183A09BB00965A56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "血压监测";
+			productName = "血压监测";
+			productReference = CE7947CA183A09BB00965A56 /* 血压监测.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE7947E4183A09BB00965A56 /* 血压监测Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE7947F9183A09BB00965A56 /* Build configuration list for PBXNativeTarget "血压监测Tests" */;
+			buildPhases = (
+				CE7947E1183A09BB00965A56 /* Sources */,
+				CE7947E2183A09BB00965A56 /* Frameworks */,
+				CE7947E3183A09BB00965A56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE7947EB183A09BB00965A56 /* PBXTargetDependency */,
+			);
+			name = "血压监测Tests";
+			productName = "血压监测Tests";
+			productReference = CE7947E5183A09BB00965A56 /* 血压监测Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE7947C2183A09BB00965A56 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JS;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Junsheng;
+				TargetAttributes = {
+					CE7947E4183A09BB00965A56 = {
+						TestTargetID = CE7947C9183A09BB00965A56;
+					};
+				};
+			};
+			buildConfigurationList = CE7947C5183A09BB00965A56 /* Build configuration list for PBXProject "血压监测" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE7947C1183A09BB00965A56;
+			productRefGroup = CE7947CB183A09BB00965A56 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE7947C9183A09BB00965A56 /* 血压监测 */,
+				CE7947E4183A09BB00965A56 /* 血压监测Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE7947C8183A09BB00965A56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE794852183A216200965A56 /* viewbg.png in Resources */,
+				CE7947D8183A09BB00965A56 /* InfoPlist.strings in Resources */,
+				CE7947E0183A09BB00965A56 /* Images.xcassets in Resources */,
+				CE794851183A216200965A56 /* menubg.png in Resources */,
+				CE79484E183A207900965A56 /* top_more@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7947E3183A09BB00965A56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7947F1183A09BB00965A56 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE7947C6183A09BB00965A56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE794837183A0C1500965A56 /* PNLineChart.m in Sources */,
+				CE794836183A0C1500965A56 /* PNColor.m in Sources */,
+				CE794841183A0CA000965A56 /* JSMainViewController.m in Sources */,
+				CE794859183A2C6C00965A56 /* JSBloodDataCell.m in Sources */,
+				CE794833183A0C1500965A56 /* PNBarChart.m in Sources */,
+				CE79483E183A0C7800965A56 /* JSCommonViewController.m in Sources */,
+				CE794832183A0C1500965A56 /* PNBar.m in Sources */,
+				CE794834183A0C1500965A56 /* PNChart.m in Sources */,
+				CE794856183A279B00965A56 /* JSNavigationViewController.m in Sources */,
+				CE794835183A0C1500965A56 /* PNChartLabel.m in Sources */,
+				CE7947DA183A09BB00965A56 /* main.m in Sources */,
+				CE794847183A186000965A56 /* JSTabBarViewController.m in Sources */,
+				CE7947DE183A09BB00965A56 /* JSAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7947E1183A09BB00965A56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7947F3183A09BB00965A56 /* ____Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE7947EB183A09BB00965A56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE7947C9183A09BB00965A56 /* 血压监测 */;
+			targetProxy = CE7947EA183A09BB00965A56 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE7947D6183A09BB00965A56 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE7947D7183A09BB00965A56 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CE7947EF183A09BB00965A56 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE7947F0183A09BB00965A56 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE7947F4183A09BB00965A56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CE7947F5183A09BB00965A56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE7947F7183A09BB00965A56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "血压监测/血压监测-Prefix.pch";
+				INFOPLIST_FILE = "血压监测/血压监测-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s arm64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CE7947F8183A09BB00965A56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "血压监测/血压监测-Prefix.pch";
+				INFOPLIST_FILE = "血压监测/血压监测-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s arm64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CE7947FA183A09BB00965A56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/血压监测.app/血压监测";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "血压监测/血压监测-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "血压监测Tests/血压监测Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CE7947FB183A09BB00965A56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/血压监测.app/血压监测";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "血压监测/血压监测-Prefix.pch";
+				INFOPLIST_FILE = "血压监测Tests/血压监测Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE7947C5183A09BB00965A56 /* Build configuration list for PBXProject "血压监测" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE7947F4183A09BB00965A56 /* Debug */,
+				CE7947F5183A09BB00965A56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE7947F6183A09BB00965A56 /* Build configuration list for PBXNativeTarget "血压监测" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE7947F7183A09BB00965A56 /* Debug */,
+				CE7947F8183A09BB00965A56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CE7947F9183A09BB00965A56 /* Build configuration list for PBXNativeTarget "血压监测Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE7947FA183A09BB00965A56 /* Debug */,
+				CE7947FB183A09BB00965A56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE7947C2183A09BB00965A56 /* Project object */;
+}
