@@ -39,6 +39,19 @@
 		CE794863183A4EBE00965A56 /* 菜单@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE794862183A4EBE00965A56 /* 菜单@2x.png */; };
 		CE794865183A506A00965A56 /* line_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE794864183A506A00965A56 /* line_bg@2x.png */; };
 		CE794867183A51F300965A56 /* storefront_icon_data_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE794866183A51F300965A56 /* storefront_icon_data_on@2x.png */; };
+		CE79486A183A575600965A56 /* JSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE794869183A575600965A56 /* JSLoginViewController.m */; };
+		CE79486E183A57A400965A56 /* JSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = CE79486D183A57A400965A56 /* JSUser.m */; };
+		CE79487A183A5BFD00965A56 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE794874183A5BFD00965A56 /* CoreTelephony.framework */; };
+		CE79487B183A5BFD00965A56 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE794875183A5BFD00965A56 /* libc++.dylib */; };
+		CE79487C183A5BFD00965A56 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE794876183A5BFD00965A56 /* libiconv.dylib */; };
+		CE79487D183A5BFD00965A56 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE794877183A5BFD00965A56 /* libsqlite3.dylib */; };
+		CE79487E183A5BFD00965A56 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE794878183A5BFD00965A56 /* libz.dylib */; };
+		CE79487F183A5BFD00965A56 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE794879183A5BFD00965A56 /* SystemConfiguration.framework */; };
+		CE794889183A60CF00965A56 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE794888183A60CF00965A56 /* Security.framework */; };
+		CE79488B183A60F700965A56 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE79488A183A60F700965A56 /* MobileCoreServices.framework */; };
+		CE79488D183A610900965A56 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE79488C183A610900965A56 /* CFNetwork.framework */; };
+		CE79488F183A612000965A56 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE79488E183A612000965A56 /* libxml2.dylib */; };
+		CE794891183A614800965A56 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE794890183A614800965A56 /* libstdc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +114,21 @@
 		CE794862183A4EBE00965A56 /* 菜单@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "菜单@2x.png"; sourceTree = "<group>"; };
 		CE794864183A506A00965A56 /* line_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line_bg@2x.png"; sourceTree = "<group>"; };
 		CE794866183A51F300965A56 /* storefront_icon_data_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "storefront_icon_data_on@2x.png"; sourceTree = "<group>"; };
+		CE794868183A575600965A56 /* JSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLoginViewController.h; sourceTree = "<group>"; };
+		CE794869183A575600965A56 /* JSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLoginViewController.m; sourceTree = "<group>"; };
+		CE79486C183A57A400965A56 /* JSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSUser.h; sourceTree = "<group>"; };
+		CE79486D183A57A400965A56 /* JSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSUser.m; sourceTree = "<group>"; };
+		CE794874183A5BFD00965A56 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		CE794875183A5BFD00965A56 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		CE794876183A5BFD00965A56 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		CE794877183A5BFD00965A56 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		CE794878183A5BFD00965A56 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		CE794879183A5BFD00965A56 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CE794888183A60CF00965A56 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CE79488A183A60F700965A56 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		CE79488C183A610900965A56 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		CE79488E183A612000965A56 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		CE794890183A614800965A56 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +136,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE794891183A614800965A56 /* libstdc++.dylib in Frameworks */,
+				CE79488F183A612000965A56 /* libxml2.dylib in Frameworks */,
+				CE79488D183A610900965A56 /* CFNetwork.framework in Frameworks */,
+				CE79488B183A60F700965A56 /* MobileCoreServices.framework in Frameworks */,
+				CE794889183A60CF00965A56 /* Security.framework in Frameworks */,
+				CE79487A183A5BFD00965A56 /* CoreTelephony.framework in Frameworks */,
+				CE79487B183A5BFD00965A56 /* libc++.dylib in Frameworks */,
+				CE79487C183A5BFD00965A56 /* libiconv.dylib in Frameworks */,
+				CE79487D183A5BFD00965A56 /* libsqlite3.dylib in Frameworks */,
+				CE79487E183A5BFD00965A56 /* libz.dylib in Frameworks */,
+				CE79487F183A5BFD00965A56 /* SystemConfiguration.framework in Frameworks */,
 				CE794824183A09EF00965A56 /* QuartzCore.framework in Frameworks */,
 				CE7947D0183A09BB00965A56 /* CoreGraphics.framework in Frameworks */,
 				CE7947D2183A09BB00965A56 /* UIKit.framework in Frameworks */,
@@ -152,6 +191,17 @@
 		CE7947CC183A09BB00965A56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE794890183A614800965A56 /* libstdc++.dylib */,
+				CE79488E183A612000965A56 /* libxml2.dylib */,
+				CE79488C183A610900965A56 /* CFNetwork.framework */,
+				CE79488A183A60F700965A56 /* MobileCoreServices.framework */,
+				CE794888183A60CF00965A56 /* Security.framework */,
+				CE794874183A5BFD00965A56 /* CoreTelephony.framework */,
+				CE794875183A5BFD00965A56 /* libc++.dylib */,
+				CE794876183A5BFD00965A56 /* libiconv.dylib */,
+				CE794877183A5BFD00965A56 /* libsqlite3.dylib */,
+				CE794878183A5BFD00965A56 /* libz.dylib */,
+				CE794879183A5BFD00965A56 /* SystemConfiguration.framework */,
 				CE794823183A09EF00965A56 /* QuartzCore.framework */,
 				CE7947CD183A09BB00965A56 /* Foundation.framework */,
 				CE7947CF183A09BB00965A56 /* CoreGraphics.framework */,
@@ -226,6 +276,7 @@
 		CE794838183A0C3600965A56 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				CE79486B183A578C00965A56 /* user */,
 				CE79483C183A0C7800965A56 /* JSCommonViewController.h */,
 				CE79483D183A0C7800965A56 /* JSCommonViewController.m */,
 				CE794854183A279B00965A56 /* JSNavigationViewController.h */,
@@ -252,6 +303,8 @@
 			children = (
 				CE79483F183A0CA000965A56 /* JSMainViewController.h */,
 				CE794840183A0CA000965A56 /* JSMainViewController.m */,
+				CE794868183A575600965A56 /* JSLoginViewController.h */,
+				CE794869183A575600965A56 /* JSLoginViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -286,6 +339,15 @@
 				CE79484D183A207900965A56 /* top_more@2x.png */,
 			);
 			path = 120;
+			sourceTree = "<group>";
+		};
+		CE79486B183A578C00965A56 /* user */ = {
+			isa = PBXGroup;
+			children = (
+				CE79486C183A57A400965A56 /* JSUser.h */,
+				CE79486D183A57A400965A56 /* JSUser.m */,
+			);
+			name = user;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,8 +460,10 @@
 				CE794833183A0C1500965A56 /* PNBarChart.m in Sources */,
 				CE79483E183A0C7800965A56 /* JSCommonViewController.m in Sources */,
 				CE794832183A0C1500965A56 /* PNBar.m in Sources */,
+				CE79486A183A575600965A56 /* JSLoginViewController.m in Sources */,
 				CE794861183A493100965A56 /* JSPersonBloodData.m in Sources */,
 				CE79485E183A477D00965A56 /* JSBloodData.m in Sources */,
+				CE79486E183A57A400965A56 /* JSUser.m in Sources */,
 				CE794834183A0C1500965A56 /* PNChart.m in Sources */,
 				CE794856183A279B00965A56 /* JSNavigationViewController.m in Sources */,
 				CE794835183A0C1500965A56 /* PNChartLabel.m in Sources */,
@@ -524,10 +588,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/user/Downloads/QQSDKtest,
+					/Users/user/Desktop,
+					"/Users/user/Desktop/我的code/血压管理/血压监测",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "血压监测/血压监测-Prefix.pch";
 				INFOPLIST_FILE = "血压监测/血压监测-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-fobjc-arc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
@@ -539,10 +611,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/user/Downloads/QQSDKtest,
+					/Users/user/Desktop,
+					"/Users/user/Desktop/我的code/血压管理/血压监测",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "血压监测/血压监测-Prefix.pch";
 				INFOPLIST_FILE = "血压监测/血压监测-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-fobjc-arc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;

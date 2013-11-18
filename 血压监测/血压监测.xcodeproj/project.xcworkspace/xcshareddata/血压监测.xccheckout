@@ -19,6 +19,8 @@
 	<dict>
 		<key>28CB0E28-E68B-4F37-A757-19A76EB38F28</key>
 		<string>../../..</string>
+		<key>C8445644-62DA-49FB-B99B-69C58128105B</key>
+		<string>../../../../../../Downloads/QQSDKtest</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/zha8035/Blood_pressure_management.git</string>
@@ -35,6 +37,14 @@
 			<string>28CB0E28-E68B-4F37-A757-19A76EB38F28</string>
 			<key>IDESourceControlWCCName</key>
 			<string>血压管理</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C8445644-62DA-49FB-B99B-69C58128105B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>QQSDKtest</string>
 		</dict>
 	</array>
 </dict>

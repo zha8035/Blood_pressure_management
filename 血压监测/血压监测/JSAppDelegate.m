@@ -7,7 +7,11 @@
 //
 
 #import "JSAppDelegate.h"
+#import "JSUser.h"
+
 #import "JSMainViewController.h"
+#import "JSLoginViewController.h"
+
 #import "JSTabBarViewController.h"
 @implementation JSAppDelegate
 
@@ -18,9 +22,15 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    JSTabBarViewController *tabbarVC = [[JSTabBarViewController alloc] init];
-    tabbarVC.viewControllers = @[[[JSMainViewController alloc] init]];
-    self.window.rootViewController = tabbarVC;
+    if ([JSUser isLogin]) {
+        JSTabBarViewController *tabbarVC = [[JSTabBarViewController alloc] init];
+        tabbarVC.viewControllers = @[[[JSMainViewController alloc] init]];
+        self.window.rootViewController = tabbarVC;
+    }else{
+        JSLoginViewController *loginVC = [[JSLoginViewController alloc] init];
+        self.window.rootViewController = loginVC;
+    }
+    
     return YES;
 }
 
