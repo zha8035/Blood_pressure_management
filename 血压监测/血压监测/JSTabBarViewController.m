@@ -60,7 +60,7 @@
     
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         menuView.center=CGPointMake(menuView.center.x+forward*80, menuView.center.y);
-        //menuButton.center=CGPointMake(menuButton.center.x+forward*80, menuButton.center.y);
+        menuButton.center=CGPointMake(menuButton.center.x+forward*80, menuButton.center.y);
         //currentVC.view.center=CGPointMake(currentVC.view.center.x+forward*80, currentVC.view.center.y);
     } completion:^(BOOL finished) {
         isCanMenu=YES;
@@ -131,23 +131,32 @@
     sImageView.backgroundColor=PNFreshGreen;
     [selectView addSubview:sImageView];
     
-    NSArray *tabTitles=@[@"tab_home_page_default",@"tab_my_center_default",@"tab_my_favorate_default",@"tab_many_more_default"];
+    NSArray *tabTitles=@[@"首页",@"家庭成员",@"提醒",@"退出登录"];
     for (int i=0; i<tabTitles.count; i++) {
         //添加标签背景
         
         UIButton *button=[[UIButton alloc] initWithFrame:CGRectMake(0,0, 80,50)];
         button.center=CGPointMake(40,70+60*i);
-        //[button setBackgroundImage:imageWithPath([tabTitles objectAtIndex:i], @"png") forState:UIControlStateNormal];
-        
         [button addTarget:self action:@selector(tabTitleButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         button.tag=i;
-        
         [menuView addSubview:button];
+        
+        
+        UILabel *lab= [[ UILabel alloc] initWithFrame:CGRectMake(25, 15, 50, 25)];
+        lab.textColor = [UIColor whiteColor];
+        lab.text = [tabTitles objectAtIndex:i];
+        lab.font = [UIFont boldSystemFontOfSize:12];
+        lab.layer.cornerRadius = 12.5;
+        //lab.layer.contents = (id)[UIImage imageNamed:@"viewbg"].CGImage;
+        [button addSubview:lab];
     }
     
-    UIImage *menuImage= [UIImage imageNamed:@"top_more"];
-    menuButton=[[UIButton alloc] initWithFrame:CGRectMake(20, 28, menuImage.size.width/menuImage.size.height*40, 40)];
+    UIImage *menuImage= [UIImage imageNamed:@"菜单"];
+    menuButton=[[UIButton alloc] initWithFrame:CGRectMake(-18, 20, menuImage.size.width/menuImage.size.height*40, 40)];
     [menuButton addTarget:self action:@selector(menuButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    menuButton.layer.masksToBounds = YES;
+    menuButton.layer.contents = (id)[UIImage imageNamed:@"menubg"].CGImage;
+    menuButton.layer.cornerRadius = 20;
     [menuButton setBackgroundImage:menuImage forState:UIControlStateNormal];
     //[menuButton setBackgroundImage:imageWithPath(@"选择-凹陷", @"png") forState:UIControlStateHighlighted];
     [self.view addSubview:menuButton];
@@ -159,6 +168,12 @@
     swip=[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipTheView:)];
     swip.direction=UISwipeGestureRecognizerDirectionRight;
     [self.view addGestureRecognizer:swip];
+    
+    //添加云同步
+//    UIImage *cloudImage = [UIImage imageNamed:@"storefront_icon_data_on"];
+//    UIButton *cloudButton = [[UIButton alloc] initWithFrame:CGRectMake(270, 20, 30*cloudImage.size.width/cloudImage.size.height, 30)];
+//    [cloudButton setBackgroundImage:cloudImage forState:UIControlStateNormal];
+//    [self.view addSubview:cloudButton];
 }
 -(void)swipTheView:(UISwipeGestureRecognizer *)swip
 {

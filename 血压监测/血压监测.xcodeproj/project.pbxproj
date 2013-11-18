@@ -34,6 +34,11 @@
 		CE794852183A216200965A56 /* viewbg.png in Resources */ = {isa = PBXBuildFile; fileRef = CE794850183A216200965A56 /* viewbg.png */; };
 		CE794856183A279B00965A56 /* JSNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE794855183A279B00965A56 /* JSNavigationViewController.m */; };
 		CE794859183A2C6C00965A56 /* JSBloodDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE794858183A2C6C00965A56 /* JSBloodDataCell.m */; };
+		CE79485E183A477D00965A56 /* JSBloodData.m in Sources */ = {isa = PBXBuildFile; fileRef = CE79485D183A477D00965A56 /* JSBloodData.m */; };
+		CE794861183A493100965A56 /* JSPersonBloodData.m in Sources */ = {isa = PBXBuildFile; fileRef = CE794860183A493100965A56 /* JSPersonBloodData.m */; };
+		CE794863183A4EBE00965A56 /* 菜单@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE794862183A4EBE00965A56 /* 菜单@2x.png */; };
+		CE794865183A506A00965A56 /* line_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE794864183A506A00965A56 /* line_bg@2x.png */; };
+		CE794867183A51F300965A56 /* storefront_icon_data_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE794866183A51F300965A56 /* storefront_icon_data_on@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,13 +87,20 @@
 		CE794840183A0CA000965A56 /* JSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMainViewController.m; sourceTree = "<group>"; };
 		CE794845183A186000965A56 /* JSTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTabBarViewController.h; sourceTree = "<group>"; };
 		CE794846183A186000965A56 /* JSTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTabBarViewController.m; sourceTree = "<group>"; };
-		CE79484D183A207900965A56 /* top_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_more@2x.png"; sourceTree = "<group>"; };
-		CE79484F183A216200965A56 /* menubg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubg.png; sourceTree = "<group>"; };
-		CE794850183A216200965A56 /* viewbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewbg.png; sourceTree = "<group>"; };
+		CE79484D183A207900965A56 /* top_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "top_more@2x.png"; path = "../../top_more@2x.png"; sourceTree = "<group>"; };
+		CE79484F183A216200965A56 /* menubg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menubg.png; path = ../menubg.png; sourceTree = "<group>"; };
+		CE794850183A216200965A56 /* viewbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = viewbg.png; path = ../viewbg.png; sourceTree = "<group>"; };
 		CE794854183A279B00965A56 /* JSNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNavigationViewController.h; sourceTree = "<group>"; };
 		CE794855183A279B00965A56 /* JSNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNavigationViewController.m; sourceTree = "<group>"; };
 		CE794857183A2C6C00965A56 /* JSBloodDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBloodDataCell.h; sourceTree = "<group>"; };
 		CE794858183A2C6C00965A56 /* JSBloodDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBloodDataCell.m; sourceTree = "<group>"; };
+		CE79485C183A477D00965A56 /* JSBloodData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBloodData.h; sourceTree = "<group>"; };
+		CE79485D183A477D00965A56 /* JSBloodData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBloodData.m; sourceTree = "<group>"; };
+		CE79485F183A493100965A56 /* JSPersonBloodData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPersonBloodData.h; sourceTree = "<group>"; };
+		CE794860183A493100965A56 /* JSPersonBloodData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPersonBloodData.m; sourceTree = "<group>"; };
+		CE794862183A4EBE00965A56 /* 菜单@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "菜单@2x.png"; sourceTree = "<group>"; };
+		CE794864183A506A00965A56 /* line_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line_bg@2x.png"; sourceTree = "<group>"; };
+		CE794866183A51F300965A56 /* storefront_icon_data_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "storefront_icon_data_on@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +131,7 @@
 		CE7947C1183A09BB00965A56 = {
 			isa = PBXGroup;
 			children = (
-				CE794848183A18E200965A56 /* Image */,
+				CE79485A183A46BF00965A56 /* images */,
 				CE794838183A0C3600965A56 /* common */,
 				CE7947D3183A09BB00965A56 /* 血压监测 */,
 				CE7947EC183A09BB00965A56 /* 血压监测Tests */,
@@ -247,18 +259,33 @@
 		CE79483B183A0C5C00965A56 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				CE79485C183A477D00965A56 /* JSBloodData.h */,
+				CE79485D183A477D00965A56 /* JSBloodData.m */,
+				CE79485F183A493100965A56 /* JSPersonBloodData.h */,
+				CE794860183A493100965A56 /* JSPersonBloodData.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
 		};
-		CE794848183A18E200965A56 /* Image */ = {
+		CE79485A183A46BF00965A56 /* images */ = {
 			isa = PBXGroup;
 			children = (
 				CE79484F183A216200965A56 /* menubg.png */,
 				CE794850183A216200965A56 /* viewbg.png */,
+				CE79485B183A46BF00965A56 /* 120 */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		CE79485B183A46BF00965A56 /* 120 */ = {
+			isa = PBXGroup;
+			children = (
+				CE794866183A51F300965A56 /* storefront_icon_data_on@2x.png */,
+				CE794864183A506A00965A56 /* line_bg@2x.png */,
+				CE794862183A4EBE00965A56 /* 菜单@2x.png */,
 				CE79484D183A207900965A56 /* top_more@2x.png */,
 			);
-			name = Image;
+			path = 120;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,9 +366,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE794852183A216200965A56 /* viewbg.png in Resources */,
+				CE794863183A4EBE00965A56 /* 菜单@2x.png in Resources */,
 				CE7947D8183A09BB00965A56 /* InfoPlist.strings in Resources */,
+				CE794865183A506A00965A56 /* line_bg@2x.png in Resources */,
 				CE7947E0183A09BB00965A56 /* Images.xcassets in Resources */,
 				CE794851183A216200965A56 /* menubg.png in Resources */,
+				CE794867183A51F300965A56 /* storefront_icon_data_on@2x.png in Resources */,
 				CE79484E183A207900965A56 /* top_more@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +398,8 @@
 				CE794833183A0C1500965A56 /* PNBarChart.m in Sources */,
 				CE79483E183A0C7800965A56 /* JSCommonViewController.m in Sources */,
 				CE794832183A0C1500965A56 /* PNBar.m in Sources */,
+				CE794861183A493100965A56 /* JSPersonBloodData.m in Sources */,
+				CE79485E183A477D00965A56 /* JSBloodData.m in Sources */,
 				CE794834183A0C1500965A56 /* PNChart.m in Sources */,
 				CE794856183A279B00965A56 /* JSNavigationViewController.m in Sources */,
 				CE794835183A0C1500965A56 /* PNChartLabel.m in Sources */,
@@ -578,6 +610,7 @@
 				CE7947F8183A09BB00965A56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE7947F9183A09BB00965A56 /* Build configuration list for PBXNativeTarget "血压监测Tests" */ = {
 			isa = XCConfigurationList;
@@ -586,6 +619,7 @@
 				CE7947FB183A09BB00965A56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

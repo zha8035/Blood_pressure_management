@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EE3BCF49-FEC6-4B57-B105-4AA2C98A15A9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>血压监测</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>28CB0E28-E68B-4F37-A757-19A76EB38F28</key>
+		<string>ssh://github.com/zha8035/Blood_pressure_management.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>血压监测/血压监测.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>28CB0E28-E68B-4F37-A757-19A76EB38F28</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/zha8035/Blood_pressure_management.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>28CB0E28-E68B-4F37-A757-19A76EB38F28</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>28CB0E28-E68B-4F37-A757-19A76EB38F28</string>
+			<key>IDESourceControlWCCName</key>
+			<string>血压管理</string>
+		</dict>
+	</array>
+</dict>
+</plist>

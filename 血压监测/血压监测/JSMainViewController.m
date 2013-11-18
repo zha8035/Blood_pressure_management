@@ -8,6 +8,9 @@
 
 #import "JSMainViewController.h"
 #import "JSBloodDataCell.h"
+
+#define tableviewSectionTitleHeight 50
+
 @interface JSMainViewController ()
 {
     UITableView *dataTableView;
@@ -32,7 +35,7 @@
     
     
     
-    dataTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-50)];
+    dataTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 80, self.view.frame.size.width, self.view.frame.size.height-80)];
     dataTableView.backgroundColor = [UIColor clearColor];
     dataTableView.dataSource = self;
     dataTableView.delegate = self;
@@ -40,7 +43,36 @@
     
     
 }
-
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] init];
+    //view.layer.contents = (id)[UIImage imageNamed:@"menubg"].CGImage;
+    
+    UIImageView *headImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 5, 40, 40)];
+    headImageView.layer.cornerRadius = 20;
+    headImageView.backgroundColor = [UIColor grayColor];
+    [view addSubview:headImageView];
+    
+    UILabel *nameLab = [[UILabel alloc] initWithFrame:CGRectMake(60, 0,100, tableviewSectionTitleHeight)];
+    nameLab.text = @"妹妹";
+    nameLab.textColor = [UIColor whiteColor];
+    nameLab.font = [UIFont boldSystemFontOfSize:25];
+    [view addSubview:nameLab];
+    
+//    UIImageView *sepImageView=[[UIImageView alloc] initWithFrame:CGRectMake(100, tableviewSectionTitleHeight-2, 220, 2)];
+//    sepImageView.image = [UIImage imageNamed:@"line_bg"];
+//    sepImageView.contentMode = UIViewContentModeLeft;
+//    [view addSubview:sepImageView];
+    return view;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return tableviewSectionTitleHeight;
+}
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 1;
