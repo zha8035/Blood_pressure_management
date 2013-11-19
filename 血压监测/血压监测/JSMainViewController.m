@@ -9,11 +9,14 @@
 #import "JSMainViewController.h"
 #import "JSBloodDataCell.h"
 #import "PNColor.h"
+#import "JSUser.h"
+#import "JSPersonBloodData.h"
 #define tableviewSectionTitleHeight 50
 
 @interface JSMainViewController ()
 {
     UITableView *dataTableView;
+    NSMutableArray *familyNumbersArray;
 }
 @end
 
@@ -33,7 +36,7 @@
     
     [super viewDidLoad];
     
-    
+    familyNumbersArray = [JSUser familyNumbersArray];
     
     dataTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.titleLab.frame.origin.y+65, self.view.frame.size.width, self.view.frame.size.height-(self.titleLab.frame.origin.y+65))];
     dataTableView.backgroundColor = [UIColor clearColor];
@@ -55,6 +58,8 @@
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    JSPersonBloodData *personData = [JSPersonBloodData initWithData:[familyNumbersArray objectAtIndex:section]];
+    
     UIView *view = [[UIView alloc] init];
     view.layer.contents = (id)[UIImage imageNamed:@"menubg"].CGImage;
     
@@ -63,13 +68,22 @@
     lay.frame = CGRectMake(0, 0, 320, 1);
     [view.layer addSublayer:lay];
     
-    UIImageView *headImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 5, 40, 40)];
-    headImageView.layer.cornerRadius = 20;
-    headImageView.backgroundColor = [UIColor grayColor];
+    UIView *headBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    headBgView.center = CGPointMake(30, 25);
+    headBgView.layer.cornerRadius = 20;
+    headBgView.layer.masksToBounds = YES;
+    headBgView.layer.borderWidth = 2;
+    headBgView.layer.borderColor = PNGreen.CGColor;
+    headBgView.backgroundColor = [UIColor whiteColor];
+    [view addSubview:headBgView];
+    
+    UIImageView *headImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    headImageView.center = headBgView.center;
+    headImageView.image = [UIImage imageNamed:personData.headUrl];
     [view addSubview:headImageView];
     
     UILabel *nameLab = [[UILabel alloc] initWithFrame:CGRectMake(60, 0,100, tableviewSectionTitleHeight)];
-    nameLab.text = @"妹妹";
+    nameLab.text = personData.name;
     nameLab.backgroundColor = [UIColor clearColor];
     nameLab.textColor = [UIColor whiteColor];
     nameLab.font = [UIFont boldSystemFontOfSize:25];
@@ -87,7 +101,7 @@
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return familyNumbersArray.count;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

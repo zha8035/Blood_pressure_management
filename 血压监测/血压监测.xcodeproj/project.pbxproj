@@ -55,6 +55,16 @@
 		CE794898183A704B00965A56 /* JSFamilyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE794897183A704B00965A56 /* JSFamilyViewController.m */; };
 		CE79489B183A707600965A56 /* JSRemindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE79489A183A707600965A56 /* JSRemindViewController.m */; };
 		CE79489E183A70A800965A56 /* JSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE79489D183A70A800965A56 /* JSAboutViewController.m */; };
+		CE927276183B035E00D638EA /* nodata@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE927275183B035E00D638EA /* nodata@2x.png */; };
+		CE927279183B047100D638EA /* JSFamilyNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE927278183B047100D638EA /* JSFamilyNumberCell.m */; };
+		CE92727F183B0ABF00D638EA /* JSAddFamilyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE92727E183B0ABF00D638EA /* JSAddFamilyViewController.m */; };
+		CE927286183B146100D638EA /* headImage0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE927285183B146100D638EA /* headImage0@2x.png */; };
+		CE92728E183B14A900D638EA /* headImage6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE927287183B14A900D638EA /* headImage6@2x.png */; };
+		CE92728F183B14A900D638EA /* headImage5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE927288183B14A900D638EA /* headImage5@2x.png */; };
+		CE927290183B14A900D638EA /* headImage4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE927289183B14A900D638EA /* headImage4@2x.png */; };
+		CE927291183B14A900D638EA /* headImage3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE92728A183B14A900D638EA /* headImage3@2x.png */; };
+		CE927292183B14A900D638EA /* headImage2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE92728B183B14A900D638EA /* headImage2@2x.png */; };
+		CE927293183B14A900D638EA /* headImage1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE92728C183B14A900D638EA /* headImage1@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +148,18 @@
 		CE79489A183A707600965A56 /* JSRemindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRemindViewController.m; sourceTree = "<group>"; };
 		CE79489C183A70A800965A56 /* JSAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAboutViewController.h; sourceTree = "<group>"; };
 		CE79489D183A70A800965A56 /* JSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAboutViewController.m; sourceTree = "<group>"; };
+		CE927275183B035E00D638EA /* nodata@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nodata@2x.png"; sourceTree = "<group>"; };
+		CE927277183B047100D638EA /* JSFamilyNumberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFamilyNumberCell.h; sourceTree = "<group>"; };
+		CE927278183B047100D638EA /* JSFamilyNumberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFamilyNumberCell.m; sourceTree = "<group>"; };
+		CE92727D183B0ABE00D638EA /* JSAddFamilyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAddFamilyViewController.h; sourceTree = "<group>"; };
+		CE92727E183B0ABF00D638EA /* JSAddFamilyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAddFamilyViewController.m; sourceTree = "<group>"; };
+		CE927285183B146100D638EA /* headImage0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headImage0@2x.png"; sourceTree = "<group>"; };
+		CE927287183B14A900D638EA /* headImage6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headImage6@2x.png"; sourceTree = "<group>"; };
+		CE927288183B14A900D638EA /* headImage5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headImage5@2x.png"; sourceTree = "<group>"; };
+		CE927289183B14A900D638EA /* headImage4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headImage4@2x.png"; sourceTree = "<group>"; };
+		CE92728A183B14A900D638EA /* headImage3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headImage3@2x.png"; sourceTree = "<group>"; };
+		CE92728B183B14A900D638EA /* headImage2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headImage2@2x.png"; sourceTree = "<group>"; };
+		CE92728C183B14A900D638EA /* headImage1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headImage1@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +325,8 @@
 				CE794825183A0C1500965A56 /* PNChart */,
 				CE794857183A2C6C00965A56 /* JSBloodDataCell.h */,
 				CE794858183A2C6C00965A56 /* JSBloodDataCell.m */,
+				CE927277183B047100D638EA /* JSFamilyNumberCell.h */,
+				CE927278183B047100D638EA /* JSFamilyNumberCell.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -310,6 +334,7 @@
 		CE79483A183A0C5300965A56 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				CE927284183B0D2900D638EA /* family */,
 				CE79483F183A0CA000965A56 /* JSMainViewController.h */,
 				CE794840183A0CA000965A56 /* JSMainViewController.m */,
 				CE794868183A575600965A56 /* JSLoginViewController.h */,
@@ -348,6 +373,14 @@
 		CE79485B183A46BF00965A56 /* 120 */ = {
 			isa = PBXGroup;
 			children = (
+				CE927287183B14A900D638EA /* headImage6@2x.png */,
+				CE927288183B14A900D638EA /* headImage5@2x.png */,
+				CE927289183B14A900D638EA /* headImage4@2x.png */,
+				CE92728A183B14A900D638EA /* headImage3@2x.png */,
+				CE92728B183B14A900D638EA /* headImage2@2x.png */,
+				CE92728C183B14A900D638EA /* headImage1@2x.png */,
+				CE927285183B146100D638EA /* headImage0@2x.png */,
+				CE927275183B035E00D638EA /* nodata@2x.png */,
 				CE794866183A51F300965A56 /* storefront_icon_data_on@2x.png */,
 				CE794864183A506A00965A56 /* line_bg@2x.png */,
 				CE794862183A4EBE00965A56 /* 菜单@2x.png */,
@@ -363,6 +396,15 @@
 				CE79486D183A57A400965A56 /* JSUser.m */,
 			);
 			name = user;
+			sourceTree = "<group>";
+		};
+		CE927284183B0D2900D638EA /* family */ = {
+			isa = PBXGroup;
+			children = (
+				CE92727D183B0ABE00D638EA /* JSAddFamilyViewController.h */,
+				CE92727E183B0ABF00D638EA /* JSAddFamilyViewController.m */,
+			);
+			name = family;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,13 +484,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE927292183B14A900D638EA /* headImage2@2x.png in Resources */,
+				CE92728F183B14A900D638EA /* headImage5@2x.png in Resources */,
 				CE794852183A216200965A56 /* viewbg.png in Resources */,
+				CE927293183B14A900D638EA /* headImage1@2x.png in Resources */,
+				CE927290183B14A900D638EA /* headImage4@2x.png in Resources */,
 				CE794863183A4EBE00965A56 /* 菜单@2x.png in Resources */,
+				CE927291183B14A900D638EA /* headImage3@2x.png in Resources */,
 				CE7947D8183A09BB00965A56 /* InfoPlist.strings in Resources */,
+				CE92728E183B14A900D638EA /* headImage6@2x.png in Resources */,
 				CE794865183A506A00965A56 /* line_bg@2x.png in Resources */,
+				CE927276183B035E00D638EA /* nodata@2x.png in Resources */,
 				CE7947E0183A09BB00965A56 /* Images.xcassets in Resources */,
 				CE794851183A216200965A56 /* menubg.png in Resources */,
 				CE794867183A51F300965A56 /* storefront_icon_data_on@2x.png in Resources */,
+				CE927286183B146100D638EA /* headImage0@2x.png in Resources */,
 				CE79484E183A207900965A56 /* top_more@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,6 +527,7 @@
 				CE79483E183A0C7800965A56 /* JSCommonViewController.m in Sources */,
 				CE794832183A0C1500965A56 /* PNBar.m in Sources */,
 				CE79486A183A575600965A56 /* JSLoginViewController.m in Sources */,
+				CE92727F183B0ABF00D638EA /* JSAddFamilyViewController.m in Sources */,
 				CE794861183A493100965A56 /* JSPersonBloodData.m in Sources */,
 				CE79485E183A477D00965A56 /* JSBloodData.m in Sources */,
 				CE79489B183A707600965A56 /* JSRemindViewController.m in Sources */,
@@ -487,6 +538,7 @@
 				CE794835183A0C1500965A56 /* PNChartLabel.m in Sources */,
 				CE7947DA183A09BB00965A56 /* main.m in Sources */,
 				CE794847183A186000965A56 /* JSTabBarViewController.m in Sources */,
+				CE927279183B047100D638EA /* JSFamilyNumberCell.m in Sources */,
 				CE7947DE183A09BB00965A56 /* JSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

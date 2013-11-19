@@ -9,11 +9,17 @@
 #import "JSPersonBloodData.h"
 
 @implementation JSPersonBloodData
-+(JSPersonBloodData *)initWithData:(NSDictionary *)data
++(JSPersonBloodData *)initWithData:(NSArray *)data
 {
     JSPersonBloodData *peopleBloodData = [[JSPersonBloodData alloc] init];
-    peopleBloodData.bloodPressureArray = [[NSMutableArray alloc] init];
-    peopleBloodData.bloodArray = [[NSMutableArray alloc] init];
+    peopleBloodData.headUrl = [data objectAtIndex:0];
+    peopleBloodData.name = [data objectAtIndex:1];
+    peopleBloodData.sex = [data objectAtIndex:2];
+    peopleBloodData.age  = [data objectAtIndex:3];
+    peopleBloodData.hight = [data objectAtIndex:4];
+    peopleBloodData.weight = [data objectAtIndex:5];
+    peopleBloodData.bloodArray = [data objectAtIndex:6];
+    peopleBloodData.bloodPressureArray = [data objectAtIndex:7];
     return peopleBloodData;
 }
 @end

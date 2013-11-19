@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "JSPersonBloodData.h"
 @interface JSUser : NSObject
 +(BOOL)isLogin;
+
++(NSMutableArray *)familyNumbersArray;
+
++(void)addFamilyNumber:(NSArray *)data;
+
++(void)deleteFamilyNumberWithName:(NSString *)name;
 @end

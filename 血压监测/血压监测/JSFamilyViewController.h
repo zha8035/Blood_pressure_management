@@ -7,7 +7,7 @@
 //
 
 #import "JSCommonViewController.h"
-
-@interface JSFamilyViewController : JSCommonViewController
+#import "JSFamilyNumberCell.h"
+@interface JSFamilyViewController : JSCommonViewController<UITableViewDataSource,UITableViewDelegate,JSFanmilyCellDelegate>
 
 @end

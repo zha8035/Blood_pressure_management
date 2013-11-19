@@ -163,7 +163,10 @@
     menuButton.layer.masksToBounds = YES;
     menuButton.layer.contents = (id)[UIImage imageNamed:@"menubg"].CGImage;
     menuButton.layer.cornerRadius = 20;
-    [menuButton setBackgroundImage:menuImage forState:UIControlStateNormal];
+    
+    UIImageView *mImageView = [[UIImageView alloc] initWithFrame:CGRectMake(13, 5, menuImage.size.width/menuImage.size.height*30, 30)];
+    mImageView.image = menuImage;
+    [menuButton addSubview:mImageView];
     //[menuButton setBackgroundImage:imageWithPath(@"选择-凹陷", @"png") forState:UIControlStateHighlighted];
     [self.view addSubview:menuButton];
     //添加手势

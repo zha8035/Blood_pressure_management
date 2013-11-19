@@ -12,10 +12,10 @@
 @property (nonatomic,strong) NSMutableArray *bloodArray;
 @property (nonatomic,strong) NSMutableArray *bloodPressureArray;
 @property (nonatomic,strong) NSString *name;
-@property (nonatomic,strong) NSString *birthday;
+@property (nonatomic,strong) NSString *age;
 @property (nonatomic,strong) NSString *headUrl;
 @property (nonatomic,strong) NSString *sex;
 @property (nonatomic,strong) NSString *weight;
 @property (nonatomic,strong) NSString *hight;
-+(JSPersonBloodData *)initWithData:(NSDictionary *)data;
++(JSPersonBloodData *)initWithData:(NSArray *)data;
 @end
