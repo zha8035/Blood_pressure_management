@@ -102,6 +102,7 @@
         frame.origin.y = -20;
         [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             self.view.frame = frame;
+            self.titleLab.alpha = 0;
         } completion:nil];
     }
 }
@@ -115,6 +116,7 @@
         frame.origin.y = posiY;
         [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             self.view.frame = frame;
+            self.titleLab.alpha = 1;
         } completion:nil];
     }
 }

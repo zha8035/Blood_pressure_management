@@ -8,7 +8,7 @@
 
 #import "JSMainViewController.h"
 #import "JSBloodDataCell.h"
-
+#import "PNColor.h"
 #define tableviewSectionTitleHeight 50
 
 @interface JSMainViewController ()
@@ -42,7 +42,16 @@
     dataTableView.delegate = self;
     [self.view addSubview:dataTableView];
     
-    
+    UIButton *addButton = [[UIButton alloc] initWithFrame:CGRectMake(270, self.view.frame.size.height-60, 40, 40)];
+    addButton.layer.cornerRadius = 20;
+    addButton.layer.masksToBounds = YES;
+    addButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    addButton.layer.borderWidth = 2;
+    [addButton setTitle:@"+" forState:UIControlStateNormal];
+    [addButton setBackgroundImage:[UIImage imageNamed:@"menubg"] forState:UIControlStateNormal];
+    [addButton setTitleColor:PNGreen forState:UIControlStateNormal];
+    addButton.titleLabel.font = [UIFont fontWithName:@"Avenir-Medium" size:43.0];
+    [self.view addSubview:addButton];
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {

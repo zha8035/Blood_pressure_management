@@ -61,7 +61,7 @@
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         menuView.center=CGPointMake(menuView.center.x+forward*80, menuView.center.y);
         menuButton.center=CGPointMake(menuButton.center.x+forward*80, menuButton.center.y);
-        //currentVC.view.center=CGPointMake(currentVC.view.center.x+forward*80, currentVC.view.center.y);
+        currentVC.view.center=CGPointMake(currentVC.view.center.x+forward*80, currentVC.view.center.y);
     } completion:^(BOOL finished) {
         isCanMenu=YES;
     }];
@@ -85,6 +85,10 @@
             selectView.frame=frame;
         } completion:^(BOOL finished) {
             self.selectedIndex=button.tag;
+            UIViewController *currentVC=self.selectedViewController;
+            if (currentVC.view.frame.origin.x==0) {
+                currentVC.view.center=CGPointMake(currentVC.view.center.x+80, currentVC.view.center.y);
+            }
             [self menuButtonClick];
         }];
     }];
@@ -114,6 +118,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.layer.contents = (id)[UIImage imageNamed:@"menubg"].CGImage;
     isCanMenu=YES;
 	//添加菜单
     menuView=[[UIImageView alloc] initWithFrame:CGRectMake(-80, 20, 80, [[UIScreen mainScreen] bounds].size.height)];
