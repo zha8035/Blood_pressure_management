@@ -13,6 +13,11 @@
     BOOL isEdit;
     BOOL isCanSave;
     float posiY;
+    
+    UITextField *emailTextField;
+    UITextField *nameTextField;
+    UITextField *passwordTextField;
+    UITextField *rePasswordTextField;
 }
 @end
 
@@ -75,9 +80,17 @@
         [textField addTarget:self action:@selector(textFieldBeginEdit:) forControlEvents:UIControlEventEditingDidBegin];
         [self.view addSubview:textField];
         if (i == 0) {
+            emailTextField = textField;
             textField.keyboardType = UIKeyboardTypeEmailAddress;
         }else if(i > 1){
             textField.secureTextEntry = YES;
+        }
+        if (i == 1) {
+            nameTextField = textField;
+        }else if (i == 2){
+            passwordTextField = textField;
+        }else{
+            rePasswordTextField = textField;
         }
     }
 }
@@ -127,7 +140,11 @@
 }
 -(void)addButtonClick
 {
-    
+    if (!isCanSave) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请先填写完成基本信息" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        [alert show];
+        return;
+    }
 }
 -(void)viewWillAppear:(BOOL)animated
 {

@@ -16,4 +16,6 @@
 +(void)addFamilyNumber:(NSArray *)data;
 
 +(void)deleteFamilyNumberWithName:(NSString *)name;
+
++(void)addBlood2FamilyNumberWithName:(NSString *)name andWithData:(NSString *)str;
 @end

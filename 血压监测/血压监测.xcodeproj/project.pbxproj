@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE31506C183C453D00D0FB0A /* JSRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE31506B183C453D00D0FB0A /* JSRegisterViewController.m */; };
 		CE31506E183C458200D0FB0A /* 返回@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE31506D183C458200D0FB0A /* 返回@2x.png */; };
+		CE315071183C4D3100D0FB0A /* JSRemindCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE315070183C4D3100D0FB0A /* JSRemindCell.m */; };
 		CE7947CE183A09BB00965A56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7947CD183A09BB00965A56 /* Foundation.framework */; };
 		CE7947D0183A09BB00965A56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7947CF183A09BB00965A56 /* CoreGraphics.framework */; };
 		CE7947D2183A09BB00965A56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7947D1183A09BB00965A56 /* UIKit.framework */; };
@@ -84,6 +85,8 @@
 		CE31506A183C453D00D0FB0A /* JSRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRegisterViewController.h; sourceTree = "<group>"; };
 		CE31506B183C453D00D0FB0A /* JSRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRegisterViewController.m; sourceTree = "<group>"; };
 		CE31506D183C458200D0FB0A /* 返回@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回@2x.png"; sourceTree = "<group>"; };
+		CE31506F183C4D3100D0FB0A /* JSRemindCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRemindCell.h; sourceTree = "<group>"; };
+		CE315070183C4D3100D0FB0A /* JSRemindCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRemindCell.m; sourceTree = "<group>"; };
 		CE7947CA183A09BB00965A56 /* 血压监测.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "血压监测.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7947CD183A09BB00965A56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE7947CF183A09BB00965A56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -346,6 +349,8 @@
 				CE794858183A2C6C00965A56 /* JSBloodDataCell.m */,
 				CE927277183B047100D638EA /* JSFamilyNumberCell.h */,
 				CE927278183B047100D638EA /* JSFamilyNumberCell.m */,
+				CE31506F183C4D3100D0FB0A /* JSRemindCell.h */,
+				CE315070183C4D3100D0FB0A /* JSRemindCell.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -565,6 +570,7 @@
 				CE79489B183A707600965A56 /* JSRemindViewController.m in Sources */,
 				CE79486E183A57A400965A56 /* JSUser.m in Sources */,
 				CE794898183A704B00965A56 /* JSFamilyViewController.m in Sources */,
+				CE315071183C4D3100D0FB0A /* JSRemindCell.m in Sources */,
 				CE794834183A0C1500965A56 /* PNChart.m in Sources */,
 				CE794856183A279B00965A56 /* JSNavigationViewController.m in Sources */,
 				CE794835183A0C1500965A56 /* PNChartLabel.m in Sources */,

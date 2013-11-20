@@ -45,6 +45,11 @@
 {
     self.titleLab.text = @"家庭成员";
     familyNumbersArray = [JSUser familyNumbersArray];
+    if (familyNumbersArray.count > 0) {
+        self.noDataImageView.alpha = 0;
+    }else{
+        self.noDataImageView.alpha = 1;
+    }
     [dataTableView reloadData];
 }
 

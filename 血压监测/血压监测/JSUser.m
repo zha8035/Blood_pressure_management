@@ -53,4 +53,15 @@
     }
     
 }
++(void)addBlood2FamilyNumberWithName:(NSString *)name andWithData:(NSString *)str
+{
+    NSMutableDictionary *a = [NSMutableDictionary dictionaryWithDictionary:[[NSUserDefaults standardUserDefaults] valueForKey:@"familyNumber"]];
+    if (a) {
+        NSMutableArray *dataArray = [[a objectForKey:name] lastObject];
+        [dataArray insertObject:str atIndex:0];
+        
+        [[NSUserDefaults standardUserDefaults] setValue:a forKey:@"familyNumber"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
 @end

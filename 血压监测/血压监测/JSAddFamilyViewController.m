@@ -185,6 +185,7 @@
         lab.backgroundColor = [UIColor clearColor];
         [cancelButton addSubview:lab];
     }
+    [self touchesBegan:Nil withEvent:nil];
     [sexActionSheet showInView:self.view];
 }
 //性别
@@ -201,7 +202,7 @@
 -(void)addButtonClick
 {
     if (isCanSave) {
-        NSArray *array = @[headImageName,nameTextField.text,sexTextField.text,ageTextField.text,hightTextField.text,weightTextField.text,[[NSArray alloc] init],[[NSArray alloc] init],[[NSArray alloc] init],[[NSArray alloc] init]];
+        NSArray *array = @[headImageName,nameTextField.text,sexTextField.text,ageTextField.text,hightTextField.text,weightTextField.text,[[NSArray alloc] init]];
         [JSUser addFamilyNumber:array];
         
         [self dismissViewControllerAnimated:YES completion:nil];

@@ -9,9 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface JSPersonBloodData : NSObject
-@property (nonatomic,strong) NSMutableArray *bloodArray;
-@property (nonatomic,strong) NSMutableArray *lowBloodPressureArray;
-@property (nonatomic,strong) NSMutableArray *highBloodPressureArray;
+@property (nonatomic,strong) NSMutableArray *dataArray;
+
 @property (nonatomic,strong) NSString *name;
 @property (nonatomic,strong) NSString *age;
 @property (nonatomic,strong) NSString *headUrl;

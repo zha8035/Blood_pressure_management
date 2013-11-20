@@ -7,7 +7,7 @@
 //
 
 #import "JSRemindViewController.h"
-
+#import "PNColor.h"
 @interface JSRemindViewController ()
 
 @end
@@ -22,16 +22,29 @@
     }
     return self;
 }
--(void)viewDidAppear:(BOOL)animated
+-(void)viewWillAppear:(BOOL)animated
 {
     self.titleLab.text = @"提醒";
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	UIButton *addButton = [[UIButton alloc] initWithFrame:CGRectMake(270, self.view.frame.size.height - 60, 40, 40)];
+    addButton.layer.cornerRadius = 20;
+    addButton.layer.masksToBounds = YES;
+    addButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    addButton.layer.borderWidth = 2;
+    [addButton setTitle:@"+" forState:UIControlStateNormal];
+    [addButton setBackgroundImage:[UIImage imageNamed:@"menubg"] forState:UIControlStateNormal];
+    [addButton setTitleColor:PNGreen forState:UIControlStateNormal];
+    addButton.titleLabel.font = [UIFont fontWithName:@"Avenir-Medium" size:43.0];
+    [addButton addTarget:self action:@selector(addButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:addButton];
 }
-
+- (void)addButtonClick
+{
+    
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -10,4 +10,5 @@
 
 @interface JSCommonViewController : UIViewController
 @property (nonatomic,strong) UILabel *titleLab;
+@property (nonatomic,strong) UIImageView *noDataImageView;
 @end

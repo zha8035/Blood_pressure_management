@@ -57,6 +57,8 @@
     addButton.titleLabel.font = [UIFont fontWithName:@"Avenir-Medium" size:43.0];
     [addButton addTarget:self action:@selector(addButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:addButton];
+    
+    
 }
 -(void)addButtonClick
 {
@@ -132,6 +134,11 @@
 {
     self.titleLab.text = @"首页";
     familyNumbersArray = [JSUser familyNumbersArray];
+    if (familyNumbersArray.count > 0) {
+        self.noDataImageView.alpha = 0;
+    }else{
+        self.noDataImageView.alpha = 1;
+    }
     [dataTableView reloadData];
 }
 - (void)didReceiveMemoryWarning
