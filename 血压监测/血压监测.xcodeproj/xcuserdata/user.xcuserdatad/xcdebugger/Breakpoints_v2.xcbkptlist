@@ -312,28 +312,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSAddDataViewController.m"
-            timestampString = "406566337.842376"
+            timestampString = "406612037.169035"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#34880;&#21387;&#30417;&#27979;/JSAddDataViewController.m"
-            timestampString = "406566337.842376"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
-            landmarkName = "-touchesBegan:withEvent:"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
+            landmarkName = "-tapTheSelfView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -382,6 +366,38 @@
             startingLineNumber = "137"
             endingLineNumber = "137"
             landmarkName = "-viewWillAppear:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#34880;&#21387;&#30417;&#27979;/JSAddDataViewController.m"
+            timestampString = "406612037.169035"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "339"
+            endingLineNumber = "339"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#34880;&#21387;&#30417;&#27979;/JSAddDataViewController.m"
+            timestampString = "406612037.169035"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "-tapTheSelfView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

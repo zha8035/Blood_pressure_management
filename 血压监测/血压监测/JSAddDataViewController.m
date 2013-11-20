@@ -15,10 +15,19 @@
 {
     UITableView *dataTableView;
     NSMutableArray *familyNumbersArray;
+    
+    UITapGestureRecognizer *selfViewTap;
+    
     float posiY;
     BOOL isEdit;
     BOOL isCanSave;
     UIView *bgView;
+    
+    UIView *resultView;
+    UILabel *resultHighLab;
+    UILabel *resultLowLab;
+    UILabel *resultBloodLab;
+    UILabel *resultLab;
 }
 @end
 
@@ -110,6 +119,131 @@
     dataTableView.delegate = self;
     dataTableView.center = self.view.center;
     [self.view addSubview:dataTableView];
+    
+    resultView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+    resultView.center = self.view.center;
+    resultView.layer.contents = (id)[UIImage imageNamed:@"viewbg"].CGImage;
+    resultView.layer.borderColor = PNGreen.CGColor;
+    resultView.layer.borderWidth =3;
+    resultView.layer.cornerRadius =10;
+    resultView.alpha = 0;
+    resultView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:resultView];
+    
+    UIImageView *colorBarImageview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 20, 300, 30)];
+    colorBarImageview.image = [UIImage imageNamed:@"colorbar"];
+    [resultView addSubview:colorBarImageview];
+    
+    //添加结果说明
+    resultLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 150, 40)];
+    resultLab.layer.cornerRadius = 5;
+    resultLab.layer.borderColor = [UIColor whiteColor].CGColor;
+    resultLab.layer.borderWidth = 2;
+    resultLab.backgroundColor = PNGreen;
+    resultLab.font = [UIFont boldSystemFontOfSize:20];
+    resultLab.text = @"正常";
+    resultLab.textColor = [UIColor whiteColor];
+    resultLab.textAlignment = NSTextAlignmentCenter;
+    resultLab.center = CGPointMake(150, 90);
+    [resultView addSubview:resultLab];
+    
+    //添加高压
+    resultHighLab = [[UILabel alloc] initWithFrame:CGRectMake(10, 130, 70, 30)];
+    resultHighLab.text = @"120";
+    resultHighLab.backgroundColor = [UIColor clearColor];
+    resultHighLab.font = [UIFont boldSystemFontOfSize:30];
+    resultHighLab.textAlignment = NSTextAlignmentRight;
+    resultHighLab.textColor = [UIColor whiteColor];
+    [resultView addSubview:resultHighLab];
+    
+    UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(85, 130, 100, 30)];
+    lab.backgroundColor = [UIColor whiteColor];
+    lab.text = @"收缩压 \nmmHg";
+    lab.numberOfLines = 0;
+    lab.textColor = [UIColor whiteColor];
+    lab.font = [UIFont boldSystemFontOfSize:12];
+    lab.backgroundColor = [UIColor clearColor];
+    [resultView addSubview:lab];
+    //添加高压
+    resultLowLab = [[UILabel alloc] initWithFrame:CGRectMake(120, 130, 70, 30)];
+    resultLowLab.text = @"80";
+    resultLowLab.backgroundColor = [UIColor clearColor];
+    resultLowLab.font = [UIFont boldSystemFontOfSize:30];
+    resultLowLab.textAlignment = NSTextAlignmentRight;
+    resultLowLab.textColor = [UIColor whiteColor];
+    [resultView addSubview:resultLowLab];
+    
+    lab = [[UILabel alloc] initWithFrame:CGRectMake(200, 130, 100, 30)];
+    lab.backgroundColor = [UIColor whiteColor];
+    lab.text = @"舒张压 \nmmHg";
+    lab.numberOfLines = 0;
+    lab.textColor = [UIColor whiteColor];
+    lab.font = [UIFont boldSystemFontOfSize:12];
+    lab.backgroundColor = [UIColor clearColor];
+    [resultView addSubview:lab];
+    
+    //添加分割线
+    CALayer *lineLayer = [[CALayer alloc] init];
+    lineLayer.backgroundColor = [UIColor grayColor].CGColor;
+    lineLayer.frame = CGRectMake(20, 160, 260, 2);
+    [resultView.layer addSublayer:lineLayer];
+    
+    //添加心率
+    resultBloodLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 165, 300, 30)];
+    resultBloodLab.text = @"80";
+    resultBloodLab.backgroundColor = [UIColor clearColor];
+    resultBloodLab.font = [UIFont boldSystemFontOfSize:30];
+    resultBloodLab.textAlignment = NSTextAlignmentCenter;
+    resultBloodLab.textColor = [UIColor whiteColor];
+    [resultView addSubview:resultBloodLab];
+    
+    lab = [[UILabel alloc] initWithFrame:CGRectMake(200, 165, 100, 30)];
+    lab.backgroundColor = [UIColor whiteColor];
+    lab.text = @"心率 \nBMP";
+    lab.numberOfLines = 0;
+    lab.textColor = [UIColor whiteColor];
+    lab.font = [UIFont boldSystemFontOfSize:12];
+    lab.backgroundColor = [UIColor clearColor];
+    [resultView addSubview:lab];
+    
+    //添加确定按钮
+    
+    //添加手势
+    [bgView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapTheView)]];
+    
+    selfViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapTheSelfView)];
+    [self.view addGestureRecognizer:selfViewTap];
+}
+-(void)tapTheSelfView
+{
+    if (isEdit) {
+        [self.view removeGestureRecognizer:selfViewTap];
+        bgView.alpha = 0;
+        isCanSave = YES;
+        for (UIView *v in self.view.subviews) {
+            if ([v.class isSubclassOfClass:[UITextField class]]) {
+                [v resignFirstResponder];
+                if (((UITextField *)v).text.length == 0) {
+                    isCanSave = NO;
+                }
+            }
+        }
+        isEdit = NO;
+        CGRect frame = self.view.frame;
+        frame.origin.y = posiY;
+        [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            self.view.frame = frame;
+        } completion:^(BOOL finished) {
+            
+            
+        }];
+    }
+}
+-(void)tapTheView
+{
+    dataTableView.alpha = 0;
+    resultView.alpha = 0;
+    bgView.alpha = 0;
 }
 -(void)addButtonClick
 {
@@ -118,8 +252,12 @@
         [alert show];
         return;
     }
-    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    CGRect frame = dataTableView.frame;
+    frame.origin.x = 320;
+    dataTableView.frame = frame;
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         dataTableView.alpha = 1;
+        dataTableView.center = self.view.center;
         bgView.alpha = 1;
     } completion:^(BOOL finished) {
         
@@ -130,34 +268,7 @@
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-//触摸事件
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    if (!isEdit) {
-        dataTableView.alpha = 0;
-        bgView.alpha = 0;
-        return;
-    }
-    bgView.alpha = 0;
-    isCanSave = YES;
-    for (UIView *v in self.view.subviews) {
-        if ([v.class isSubclassOfClass:[UITextField class]]) {
-            [v resignFirstResponder];
-            if (((UITextField *)v).text.length == 0) {
-                isCanSave = NO;
-            }
-        }
-    }
-    isEdit = NO;
-    CGRect frame = self.view.frame;
-    frame.origin.y = posiY;
-    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        self.view.frame = frame;
-    } completion:^(BOOL finished) {
-        
-        
-    }];
-}
+
 //编辑开始
 -(void)textFieldBeginEdit:(UITextField *)textField
 {
@@ -165,8 +276,9 @@
         isEdit = YES;
         posiY = self.view.frame.origin.y;
     }
+    [self.view addGestureRecognizer:selfViewTap];
     CGRect frame = self.view.frame;
-    frame.origin.y = -50*(textField.tag-100+1);
+    frame.origin.y = -40*(textField.tag-100+1);
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.view.frame = frame;
     } completion:^(BOOL finished) {
@@ -228,7 +340,19 @@
 {
     JSPersonBloodData *data = [JSPersonBloodData initWithData:[familyNumbersArray objectAtIndex:indexPath.row]];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    CGRect tableFrame = dataTableView.frame;
+    tableFrame.origin.x = -320;
+    CGRect resultFrame = resultView.frame;
+    resultFrame.origin.x = 320;
+    resultView.frame = resultFrame;
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        resultView.center = self.view.center;
+        dataTableView.frame = tableFrame;
+        dataTableView.alpha = 0;
+        resultView.alpha = 1;
+    } completion:^(BOOL finished) {
+        [dataTableView deselectRowAtIndexPath:indexPath animated:NO];
+    }];
 }
 - (void)didReceiveMemoryWarning
 {

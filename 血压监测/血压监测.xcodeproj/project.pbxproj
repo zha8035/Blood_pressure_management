@@ -10,6 +10,7 @@
 		CE31506C183C453D00D0FB0A /* JSRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE31506B183C453D00D0FB0A /* JSRegisterViewController.m */; };
 		CE31506E183C458200D0FB0A /* 返回@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE31506D183C458200D0FB0A /* 返回@2x.png */; };
 		CE315071183C4D3100D0FB0A /* JSRemindCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE315070183C4D3100D0FB0A /* JSRemindCell.m */; };
+		CE315073183C5F1E00D0FB0A /* colorbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE315072183C5F1E00D0FB0A /* colorbar@2x.png */; };
 		CE7947CE183A09BB00965A56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7947CD183A09BB00965A56 /* Foundation.framework */; };
 		CE7947D0183A09BB00965A56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7947CF183A09BB00965A56 /* CoreGraphics.framework */; };
 		CE7947D2183A09BB00965A56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7947D1183A09BB00965A56 /* UIKit.framework */; };
@@ -87,6 +88,7 @@
 		CE31506D183C458200D0FB0A /* 返回@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回@2x.png"; sourceTree = "<group>"; };
 		CE31506F183C4D3100D0FB0A /* JSRemindCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRemindCell.h; sourceTree = "<group>"; };
 		CE315070183C4D3100D0FB0A /* JSRemindCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRemindCell.m; sourceTree = "<group>"; };
+		CE315072183C5F1E00D0FB0A /* colorbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "colorbar@2x.png"; sourceTree = "<group>"; };
 		CE7947CA183A09BB00965A56 /* 血压监测.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "血压监测.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7947CD183A09BB00965A56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE7947CF183A09BB00965A56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -397,6 +399,7 @@
 		CE79485B183A46BF00965A56 /* 120 */ = {
 			isa = PBXGroup;
 			children = (
+				CE315072183C5F1E00D0FB0A /* colorbar@2x.png */,
 				CE927287183B14A900D638EA /* headImage6@2x.png */,
 				CE927288183B14A900D638EA /* headImage5@2x.png */,
 				CE927289183B14A900D638EA /* headImage4@2x.png */,
@@ -534,6 +537,7 @@
 				CE794851183A216200965A56 /* menubg.png in Resources */,
 				CE794867183A51F300965A56 /* storefront_icon_data_on@2x.png in Resources */,
 				CE927286183B146100D638EA /* headImage0@2x.png in Resources */,
+				CE315073183C5F1E00D0FB0A /* colorbar@2x.png in Resources */,
 				CE79484E183A207900965A56 /* top_more@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
