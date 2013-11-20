@@ -81,11 +81,13 @@
     CGFloat chartCavanHeight = self.frame.size.height - chartMargin * 2 - 40.0;
     NSInteger index = 0;
 	
-    for (NSString * valueString in _yValues) {
+    int count = (int)MIN(5, _yValues.count);
+    for (int i = 0;i<count;i++) {
+        NSString * valueString= [ _yValues objectAtIndex:i];
         float value = [valueString floatValue];
         
         float grade = (float)value / (float)_yValueMax;
-		
+        _xLabelWidth=32;
 		PNBar * bar = [[PNBar alloc] initWithFrame:CGRectMake((index *  _xLabelWidth + chartMargin + _xLabelWidth * 0.25), self.frame.size.height - chartCavanHeight - 30.0, _xLabelWidth * 0.25, chartCavanHeight)];
 		bar.barColor = _strokeColor;
 		bar.grade = grade;

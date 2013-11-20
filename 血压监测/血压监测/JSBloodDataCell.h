@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "JSPersonBloodData.h"
 @interface JSBloodDataCell : UITableViewCell<UIScrollViewDelegate>
-
+-(void)upCellDataWithPersonData:(JSPersonBloodData *)data;
 @end

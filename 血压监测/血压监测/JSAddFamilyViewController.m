@@ -80,7 +80,7 @@
     NSArray *titles = @[@"成员姓名",@"性别",@"年龄",@"身高",@"重量"];
     for (int  i=0; i<titles.count; i++) {
         
-        UILabel *tiLab = [[UILabel alloc] initWithFrame:CGRectMake(0, self.titleLab.frame.origin.y+205+50*i, 90, 20)];
+        UILabel *tiLab = [[UILabel alloc] initWithFrame:CGRectMake(0, self.titleLab.frame.origin.y+205+52*i, 90, 20)];
         tiLab.text = [titles objectAtIndex:i];
         tiLab.textColor = PNGreen;
         tiLab.font = [UIFont boldSystemFontOfSize:20];
@@ -88,7 +88,7 @@
         tiLab.textAlignment = NSTextAlignmentRight;
         [self.view addSubview:tiLab];
         
-        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(100, self.titleLab.frame.origin.y+190+50*i, 200, 40)];
+        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(100, self.titleLab.frame.origin.y+200+50*i, 200, 40)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.placeholder = [NSString stringWithFormat:@"点击输入%@",[titles objectAtIndex:i]];
         textField.tag = i;
@@ -202,7 +202,8 @@
 -(void)addButtonClick
 {
     if (isCanSave) {
-        NSArray *array = @[headImageName,nameTextField.text,sexTextField.text,ageTextField.text,hightTextField.text,weightTextField.text,[[NSArray alloc] init]];
+
+        NSArray *array = @[headImageName,nameTextField.text,sexTextField.text,ageTextField.text,hightTextField.text,weightTextField.text,@[[NSString stringWithFormat:@"0%@0%@0%@ ",SEP,SEP,SEP],[NSString stringWithFormat:@"0%@0%@0%@ ",SEP,SEP,SEP],[NSString stringWithFormat:@"0%@0%@0%@ ",SEP,SEP,SEP],[NSString stringWithFormat:@"0%@0%@0%@ ",SEP,SEP,SEP],[NSString stringWithFormat:@"0%@0%@0%@ ",SEP,SEP,SEP]]];
         [JSUser addFamilyNumber:array];
         
         [self dismissViewControllerAnimated:YES completion:nil];
@@ -210,7 +211,6 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请先填写完成基本信息" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
         [alert show];
     }
-    
 }
 - (void)headButtonClick
 {

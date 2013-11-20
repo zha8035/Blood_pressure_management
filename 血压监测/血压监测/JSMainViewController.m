@@ -12,6 +12,7 @@
 #import "JSUser.h"
 #import "JSPersonBloodData.h"
 #import "JSAddDataViewController.h"
+#import "JSAddFamilyViewController.h"
 #define tableviewSectionTitleHeight 50
 
 @interface JSMainViewController ()
@@ -123,23 +124,28 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *Cell=@"Cell";
-    JSBloodDataCell *cell = [tableView dequeueReusableCellWithIdentifier:Cell];
-    if (cell == nil) {
-        cell = [[JSBloodDataCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Cell];
-    }
+    
+    JSBloodDataCell *cell = [[JSBloodDataCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellIdentify"];
+//    if (cell == nil) {
+//        cell = [[JSBloodDataCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Cell];
+//    }
+    JSPersonBloodData *data = [JSPersonBloodData initWithData:[familyNumbersArray objectAtIndex:indexPath.section]];
+    [cell upCellDataWithPersonData:data];
     return cell;
 }
 -(void)viewWillAppear:(BOOL)animated
 {
     self.titleLab.text = @"首页";
     familyNumbersArray = [JSUser familyNumbersArray];
-    if (familyNumbersArray.count > 0) {
-        self.noDataImageView.alpha = 0;
-    }else{
-        self.noDataImageView.alpha = 1;
-    }
+    
     [dataTableView reloadData];
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    if (familyNumbersArray.count == 0) {
+        JSAddFamilyViewController *addFamilyVC = [[JSAddFamilyViewController alloc] init];
+        [self presentViewController:addFamilyVC animated:YES completion:nil];
+    }
 }
 - (void)didReceiveMemoryWarning
 {

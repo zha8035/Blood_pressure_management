@@ -9,16 +9,16 @@
 #import "JSPersonBloodData.h"
 
 @implementation JSPersonBloodData
-+(JSPersonBloodData *)initWithData:(NSArray *)data
++(JSPersonBloodData *)initWithData:(NSDictionary *)data
 {
     JSPersonBloodData *peopleBloodData = [[JSPersonBloodData alloc] init];
-    peopleBloodData.headUrl = [data objectAtIndex:0];
-    peopleBloodData.name = [data objectAtIndex:1];
-    peopleBloodData.sex = [data objectAtIndex:2];
-    peopleBloodData.age  = [data objectAtIndex:3];
-    peopleBloodData.hight = [data objectAtIndex:4];
-    peopleBloodData.weight = [data objectAtIndex:5];
-    peopleBloodData.dataArray = [data objectAtIndex:6];
+    peopleBloodData.headUrl = [data objectForKey:@"headImage"];
+    peopleBloodData.name = [data objectForKey:@"name"];
+    peopleBloodData.sex = [data objectForKey:@"sex"];
+    peopleBloodData.age  = [data objectForKey:@"age"];
+    peopleBloodData.hight = [data objectForKey:@"height"];
+    peopleBloodData.weight = [data objectForKey:@"weight"];
+    peopleBloodData.dataArray = [data objectForKey:@"dataArray"];
     return peopleBloodData;
 }
 @end

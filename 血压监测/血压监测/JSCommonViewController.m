@@ -31,20 +31,20 @@
         [self.view addSubview:self.titleLab];
         
         
-        UIImageView *lineImageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 38, 300, 2)];
-        lineImageView.image = [UIImage imageNamed:@"line_bg"];
-        [self.titleLab addSubview:lineImageView];
-        
-        UIImage *noDataImage = [UIImage imageNamed:@"nodata"];
-        _noDataImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200*noDataImage.size.height/noDataImage.size.width)];
-        _noDataImageView.image = noDataImage;
-        _noDataImageView.center = self.view.center;
-        _noDataImageView.alpha = 0;
-        _noDataImageView.backgroundColor = PNWhite;
-        _noDataImageView.layer.cornerRadius = 8;
-        _noDataImageView.layer.borderWidth =2;
-        _noDataImageView.layer.borderColor = PNGreen.CGColor;
-        [self.view addSubview:_noDataImageView];
+//        UIImageView *lineImageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 38, 300, 2)];
+//        lineImageView.image = [UIImage imageNamed:@"line_bg"];
+//        [self.titleLab addSubview:lineImageView];
+//        
+//        UIImage *noDataImage = [UIImage imageNamed:@"nodata"];
+//        _noDataImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200*noDataImage.size.height/noDataImage.size.width)];
+//        _noDataImageView.image = noDataImage;
+//        _noDataImageView.center = self.view.center;
+//        _noDataImageView.alpha = 0;
+//        _noDataImageView.backgroundColor = PNWhite;
+//        _noDataImageView.layer.cornerRadius = 8;
+//        _noDataImageView.layer.borderWidth =2;
+//        _noDataImageView.layer.borderColor = PNGreen.CGColor;
+//        [self.view addSubview:_noDataImageView];
     }
     return self;
 }

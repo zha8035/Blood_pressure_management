@@ -28,6 +28,15 @@
     UILabel *resultLowLab;
     UILabel *resultBloodLab;
     UILabel *resultLab;
+    UILabel *resultTimeLab;
+    
+    UITextField *highTextField;
+    UITextField *lowTextField;
+    UITextField *bloodTextField;
+    UITextField *timeTextField;
+    
+    UIImageView *headImageView;
+    UILabel *nameLab;
 }
 @end
 
@@ -63,7 +72,14 @@
         textField.keyboardType = UIKeyboardTypeNumberPad;
         textField.placeholder = [NSString stringWithFormat:@"点击输入%@",[titles objectAtIndex:i]];
         [textField addTarget:self action:@selector(textFieldBeginEdit:) forControlEvents:UIControlEventEditingDidBegin];
-        if (i == 3) {
+        if (i==0) {
+            highTextField = textField;
+        }else if(i==1){
+            lowTextField = textField;
+        }else if(i==2){
+            bloodTextField = textField;
+        }else if (i == 3) {
+            timeTextField = textField;
             NSDateFormatter *formater = [[ NSDateFormatter alloc] init];
             NSDate *curDate = [NSDate date];//获取当前日期
             [formater setDateFormat:@"yyyy-MM-dd HH:mm:ss"];//这里去掉 具体时间 保留日期
@@ -120,6 +136,17 @@
     dataTableView.center = self.view.center;
     [self.view addSubview:dataTableView];
     
+    //添加手势
+    [bgView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapTheView)]];
+    selfViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapTheSelfView)];
+    [self.view addGestureRecognizer:selfViewTap];
+    
+    
+    //初始化结果
+    [self initResultView];
+}
+-(void)initResultView
+{
     resultView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
     resultView.center = self.view.center;
     resultView.layer.contents = (id)[UIImage imageNamed:@"viewbg"].CGImage;
@@ -189,15 +216,15 @@
     [resultView.layer addSublayer:lineLayer];
     
     //添加心率
-    resultBloodLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 165, 300, 30)];
+    resultBloodLab = [[UILabel alloc] initWithFrame:CGRectMake(10, 165, 70, 30)];
     resultBloodLab.text = @"80";
     resultBloodLab.backgroundColor = [UIColor clearColor];
     resultBloodLab.font = [UIFont boldSystemFontOfSize:30];
-    resultBloodLab.textAlignment = NSTextAlignmentCenter;
+    resultBloodLab.textAlignment = NSTextAlignmentRight;
     resultBloodLab.textColor = [UIColor whiteColor];
     [resultView addSubview:resultBloodLab];
     
-    lab = [[UILabel alloc] initWithFrame:CGRectMake(200, 165, 100, 30)];
+    lab = [[UILabel alloc] initWithFrame:CGRectMake(85, 165, 100, 30)];
     lab.backgroundColor = [UIColor whiteColor];
     lab.text = @"心率 \nBMP";
     lab.numberOfLines = 0;
@@ -205,14 +232,38 @@
     lab.font = [UIFont boldSystemFontOfSize:12];
     lab.backgroundColor = [UIColor clearColor];
     [resultView addSubview:lab];
+    //添加头像
+    UIView *headBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
+    headBgView.center = CGPointMake(50, 250);
+    headBgView.layer.cornerRadius = 40;
+    headBgView.layer.masksToBounds = YES;
+    headBgView.layer.borderWidth = 2;
+    headBgView.layer.borderColor = PNGreen.CGColor;
+    headBgView.backgroundColor = [UIColor whiteColor];
+    [resultView addSubview:headBgView];
     
+    headImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
+    headImageView.center = headBgView.center;
+    [resultView addSubview:headImageView];
+    //添加姓名
+    nameLab = [[UILabel alloc] initWithFrame:CGRectMake(110, 238, 200, 30)];
+    nameLab.textColor = [UIColor whiteColor];
+    nameLab.font = [UIFont boldSystemFontOfSize:25];
+    nameLab.backgroundColor = [UIColor clearColor];
+    [resultView addSubview:nameLab];
     //添加确定按钮
     
-    //添加手势
-    [bgView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapTheView)]];
-    
-    selfViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapTheSelfView)];
-    [self.view addGestureRecognizer:selfViewTap];
+    UIButton *addButton = [[UIButton alloc] initWithFrame:CGRectMake(220,230, 40, 40)];
+    addButton.layer.cornerRadius = 20;
+    addButton.layer.masksToBounds = YES;
+    addButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    addButton.layer.borderWidth = 2;
+    [addButton setTitle:@"+" forState:UIControlStateNormal];
+    [addButton setBackgroundImage:[UIImage imageNamed:@"menubg"] forState:UIControlStateNormal];
+    [addButton setTitleColor:PNGreen forState:UIControlStateNormal];
+    addButton.titleLabel.font = [UIFont fontWithName:@"Avenir-Medium" size:43.0];
+    [addButton addTarget:self action:@selector(addDataButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [resultView addSubview:addButton];
 }
 -(void)tapTheSelfView
 {
@@ -241,17 +292,35 @@
 }
 -(void)tapTheView
 {
-    dataTableView.alpha = 0;
-    resultView.alpha = 0;
-    bgView.alpha = 0;
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        dataTableView.alpha = 0;
+        resultView.alpha = 0;
+        bgView.alpha = 0;
+    } completion:^(BOOL finished) {
+        
+    }];
 }
+//添加时间
 -(void)addButtonClick
 {
-    if (!isCanSave) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请先填写完成基本信息" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+    if (!isCanSave||[highTextField.text intValue] > 190||[bloodTextField.text intValue] > 120||[lowTextField.text intValue] < 30||[bloodTextField.text intValue] < 30||[lowTextField.text intValue]>[highTextField.text intValue]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请先正确填写完成基本信息" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
         [alert show];
         return;
     }
+    //显示结果
+    resultHighLab.text = highTextField.text;
+    resultLowLab.text = lowTextField.text;
+    resultBloodLab.text = bloodTextField.text;
+    resultTimeLab.text = timeTextField.text;
+    if ([resultHighLab.text intValue] > 160) {
+        resultLab.text = @"偏高";
+    }else if([resultLowLab.text intValue] < 60){
+        resultLab.text = @"偏低";
+    }else{
+        resultLab.text = @"正常";
+    }
+    //////////
     CGRect frame = dataTableView.frame;
     frame.origin.x = 320;
     dataTableView.frame = frame;
@@ -263,6 +332,12 @@
         
     }];
     
+}
+-(void)addDataButtonClick
+{
+    NSString *str = [NSString stringWithFormat:@"%@%@%@%@%@%@%f",highTextField.text,SEP,lowTextField.text,SEP,bloodTextField.text,SEP,[[NSDate date] timeIntervalSince1970]];
+    [JSUser addBlood2FamilyNumberWithName:nameLab.text andWithData:str];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 -(void)backButtonClick
 {
@@ -339,6 +414,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     JSPersonBloodData *data = [JSPersonBloodData initWithData:[familyNumbersArray objectAtIndex:indexPath.row]];
+    
+    nameLab.text = data.name;
+    headImageView.image = [UIImage imageNamed:data.headUrl];
     
     CGRect tableFrame = dataTableView.frame;
     tableFrame.origin.x = -320;

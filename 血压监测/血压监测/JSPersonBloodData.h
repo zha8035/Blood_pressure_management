@@ -17,5 +17,5 @@
 @property (nonatomic,strong) NSString *sex;
 @property (nonatomic,strong) NSString *weight;
 @property (nonatomic,strong) NSString *hight;
-+(JSPersonBloodData *)initWithData:(NSArray *)data;
++(JSPersonBloodData *)initWithData:(NSDictionary *)data;
 @end

@@ -31,6 +31,11 @@
 
 +(void)addFamilyNumber:(NSArray *)data
 {
+    NSArray *keys = @[@"headImage",@"name",@"sex",@"age",@"height",@"weight",@"dataArray"];
+    NSMutableDictionary *dataDic = [NSMutableDictionary dictionary];
+    for (int i=0; i<data.count; i++) {
+        [dataDic setValue:[data objectAtIndex:i] forKey:[keys objectAtIndex:i]];
+    }
     NSMutableDictionary *array = [[NSMutableDictionary alloc] init];
     NSDictionary *a = [[NSUserDefaults standardUserDefaults] valueForKey:@"familyNumber"];
     if (a) {
@@ -38,7 +43,8 @@
             [array setObject:[a objectForKey:key] forKey:key];
         }
     }
-    [array setValue:data forKey:[data objectAtIndex:1]];
+    
+    [array setValue:dataDic forKey:[dataDic objectForKey:@"name"]];
     [[NSUserDefaults standardUserDefaults] setValue:array forKey:@"familyNumber"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
@@ -57,7 +63,7 @@
 {
     NSMutableDictionary *a = [NSMutableDictionary dictionaryWithDictionary:[[NSUserDefaults standardUserDefaults] valueForKey:@"familyNumber"]];
     if (a) {
-        NSMutableArray *dataArray = [[a objectForKey:name] lastObject];
+        NSMutableArray *dataArray = [[a objectForKey:name] objectForKey:@"dataArray"];
         [dataArray insertObject:str atIndex:0];
         
         [[NSUserDefaults standardUserDefaults] setValue:a forKey:@"familyNumber"];

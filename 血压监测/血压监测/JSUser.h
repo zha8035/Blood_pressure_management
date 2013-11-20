@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "JSPersonBloodData.h"
+#define SEP @"***"
 @interface JSUser : NSObject
 +(BOOL)isLogin;
 

@@ -8,7 +8,7 @@
 
 #import "JSBloodDataCell.h"
 #import "PNChart.h"
-
+#import "JSUser.h"
 
 #define cellHight 120
 @interface JSBloodDataCell ()
@@ -53,36 +53,32 @@
         [self addSubview:myScrollView];
         
         
-        UILabel *bloodLab = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 20, cellHight)];
-        bloodLab.text = @"血\n压";
-        bloodLab.numberOfLines = 0;
-        bloodLab.font = [UIFont boldSystemFontOfSize:20];
-        bloodLab.backgroundColor = [UIColor clearColor];
-        bloodLab.textColor = [UIColor whiteColor];
-        [myScrollView addSubview:bloodLab];
+        UILabel *bLab = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 20, cellHight)];
+        bLab.text = @"血\n压";
+        bLab.numberOfLines = 0;
+        bLab.font = [UIFont boldSystemFontOfSize:20];
+        bLab.backgroundColor = [UIColor clearColor];
+        bLab.textColor = [UIColor whiteColor];
+        [myScrollView addSubview:bLab];
         
-        bloodLab = [[UILabel alloc] initWithFrame:CGRectMake( self.frame.size.width, 0, 20, cellHight)];
-        bloodLab.text = @"心\n率";
-        bloodLab.numberOfLines = 0;
-        bloodLab.font = [UIFont boldSystemFontOfSize:20];
-        bloodLab.backgroundColor = [UIColor clearColor];
-        bloodLab.textColor = [UIColor whiteColor];
-        [myScrollView addSubview:bloodLab];
+        bLab = [[UILabel alloc] initWithFrame:CGRectMake( self.frame.size.width, 0, 20, cellHight)];
+        bLab.text = @"心\n率";
+        bLab.numberOfLines = 0;
+        bLab.font = [UIFont boldSystemFontOfSize:20];
+        bLab.backgroundColor = [UIColor clearColor];
+        bLab.textColor = [UIColor whiteColor];
+        [myScrollView addSubview:bLab];
         //Add BarChart
-        highBloodChart = [[PNChart alloc] initWithFrame:CGRectMake(30, 0, SCREEN_WIDTH-120,cellHight)];
+        highBloodChart = [[PNChart alloc] initWithFrame:CGRectMake(30, 0, SCREEN_WIDTH-140,cellHight)];
         highBloodChart.backgroundColor = [UIColor clearColor];
         highBloodChart.type = PNBarType;
         highBloodChart.strokeColor = PNRed;
         [highBloodChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
-        [highBloodChart setYValues:@[@"1",@"10",@"2",@"6",@"3"]];
-        [highBloodChart strokeChart];
         [myScrollView addSubview:highBloodChart];
         
-        lowBloodChart = [[PNChart alloc] initWithFrame:CGRectMake(40, 0, SCREEN_WIDTH-120, cellHight)];
+        lowBloodChart = [[PNChart alloc] initWithFrame:CGRectMake(40, 0, SCREEN_WIDTH-130, cellHight)];
         lowBloodChart.backgroundColor = [UIColor clearColor];
         lowBloodChart.type = PNBarType;
-        //[barChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
-        [lowBloodChart setYValues:@[@"10",@"16",@"9",@"6",@"3"]];
         [lowBloodChart strokeChart];
         
         [myScrollView addSubview:lowBloodChart];
@@ -142,19 +138,16 @@
         //添加心率
         bloodChart = [[PNChart alloc] initWithFrame:CGRectMake(self.frame.size.width-10+100, 0, SCREEN_WIDTH-110, cellHight)];
         bloodChart.backgroundColor = [UIColor clearColor];
-        [bloodChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
-        [bloodChart setYValues:@[@"1",@"10",@"2",@"6",@"3"]];
-        [bloodChart strokeChart];
+        [bloodChart setXLabels:@[@"1",@"2",@"3",@"4",@"5"]];
         [myScrollView addSubview:bloodChart];
         
         //添加低压
-        bloodLab = [[UILabel alloc] initWithFrame:CGRectMake(myScrollView.frame.size.width+25, 20, 50, 30)];
-        bloodLab.backgroundColor = [UIColor clearColor];
-        bloodLab.text = @"80";
-        bloodLab.textAlignment = NSTextAlignmentCenter;
-        bloodLab.textColor = [UIColor whiteColor];
-        bloodLab.font = [UIFont boldSystemFontOfSize:25];
-        [myScrollView addSubview:bloodLab];
+        bloodLabel = [[UILabel alloc] initWithFrame:CGRectMake(myScrollView.frame.size.width+25, 20, 50, 30)];
+        bloodLabel.backgroundColor = [UIColor clearColor];
+        bloodLabel.textAlignment = NSTextAlignmentCenter;
+        bloodLabel.textColor = [UIColor whiteColor];
+        bloodLabel.font = [UIFont boldSystemFontOfSize:25];
+        [myScrollView addSubview:bloodLabel];
         
         bloodLayer = [[CALayer alloc] init];
         bloodLayer.frame = CGRectMake(myScrollView.frame.size.width+45, 60, 10, 10);
@@ -186,6 +179,69 @@
 
     }
     return self;
+}
+
+-(void)upCellDataWithPersonData:(JSPersonBloodData *)data
+{
+    NSArray *dataArray = data.dataArray;
+   
+    highLabel.text = [[[dataArray objectAtIndex:0] componentsSeparatedByString:SEP] objectAtIndex:0];
+    if ([highLabel.text intValue] > 160) {
+        highLayer.backgroundColor = PNRed.CGColor;
+    }else if([highLabel.text intValue] < 90){
+        highLayer.backgroundColor = PNBlue.CGColor;
+    }else{
+        highLayer.backgroundColor = PNGreen.CGColor;
+    }
+    
+    
+    lowLabel.text = [[[dataArray objectAtIndex:0] componentsSeparatedByString:SEP] objectAtIndex:1];
+    if ([lowLabel.text intValue] > 90) {
+        lowLayer.backgroundColor = PNRed.CGColor;
+    }else if([lowLabel.text intValue] < 60){
+        lowLayer.backgroundColor = PNBlue.CGColor;
+    }else{
+        lowLayer.backgroundColor = PNGreen.CGColor;
+    }
+    bloodLabel.text = [[[dataArray objectAtIndex:0] componentsSeparatedByString:SEP] objectAtIndex:2];
+    if ([bloodLabel.text intValue] > 100) {
+        bloodLayer.backgroundColor = PNRed.CGColor;
+    }else if([bloodLabel.text intValue] < 60){
+        bloodLayer.backgroundColor = PNBlue.CGColor;
+    }else{
+        bloodLayer.backgroundColor = PNGreen.CGColor;
+    }
+    //时间
+    NSString *timeStr = [[[dataArray objectAtIndex:0] componentsSeparatedByString:SEP] lastObject];
+    NSDate *confromTimesp = [NSDate dateWithTimeIntervalSince1970:[timeStr intValue]] ;
+    NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
+    [dateformatter setDateFormat:@"YYY-MM-dd"];
+    NSString *  endTimeString=[dateformatter stringFromDate:confromTimesp];
+    bloodTimePressureLabel.text = [NSString stringWithFormat:@"【%@】",endTimeString];
+    bloodTimeLabel.text = [NSString stringWithFormat:@"【%@】",endTimeString];
+    
+    NSMutableArray *bloodChartDatas = [NSMutableArray array];
+    NSMutableArray *bloodHighPressureDatas = [NSMutableArray array];
+    NSMutableArray *bloodLowPressureDatas = [NSMutableArray array];
+
+    for (int i=0; i<5; i++) {
+        NSArray *array = [[dataArray objectAtIndex:i] componentsSeparatedByString:SEP];
+        [bloodHighPressureDatas insertObject:[array objectAtIndex:0] atIndex:0];
+        [bloodLowPressureDatas insertObject:[array objectAtIndex:1] atIndex:0];
+        [bloodChartDatas addObject:[array objectAtIndex:2]];
+    }
+    [bloodHighPressureDatas addObject:@"200"];
+    [bloodLowPressureDatas addObject:@"200"];
+    
+    [highBloodChart setYValues:bloodHighPressureDatas];
+    [lowBloodChart setYValues:bloodLowPressureDatas];
+    
+    [highBloodChart strokeChart];
+    [lowBloodChart strokeChart];
+    
+    
+    [bloodChart setYValues:bloodChartDatas];
+    [bloodChart strokeChart];
 }
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
