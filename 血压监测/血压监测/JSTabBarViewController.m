@@ -8,6 +8,8 @@
 
 #import "JSTabBarViewController.h"
 #import "PNColor.h"
+#import "JSLoginViewController.h"
+#import "JSUser.h"
 @interface JSTabBarViewController ()
 {
     UIImageView *menuView;
@@ -68,6 +70,13 @@
 }
 -(void)tabTitleButtonClick:(UIButton *)button
 {
+    if (button.tag == 3) {
+        [JSUser logout];
+        JSLoginViewController *loginVC = [[JSLoginViewController alloc] init];
+        [self.selectedViewController presentViewController:loginVC animated:YES completion:nil];
+        [self menuButtonClick];
+        return;
+    }
     if (!isCanMenu) {
         return;
     }
@@ -200,6 +209,13 @@
             break;
         default:
             break;
+    }
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    if (![JSUser isLogin]) {
+        JSLoginViewController *loginVC = [[JSLoginViewController alloc] init];
+        [self.selectedViewController presentViewController:loginVC animated:NO completion:nil];
     }
 }
 - (void)didReceiveMemoryWarning

@@ -8,6 +8,7 @@
 
 #import "JSRegisterViewController.h"
 #import "PNColor.h"
+#import "JSUser.h"
 @interface JSRegisterViewController ()
 {
     BOOL isEdit;
@@ -140,10 +141,17 @@
 }
 -(void)addButtonClick
 {
-    if (!isCanSave) {
+    if (!isCanSave||![passwordTextField.text isEqualToString:rePasswordTextField.text]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请先填写完成基本信息" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
         [alert show];
         return;
+    }else{
+        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:emailTextField.text,@"email",nameTextField.text,@"name",passwordTextField.text,@"password", nil];
+        if ([JSUser registerWithUserData:dic]) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"成功注册" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+            [alert show];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
     }
 }
 -(void)viewWillAppear:(BOOL)animated

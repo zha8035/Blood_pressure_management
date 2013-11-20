@@ -14,7 +14,6 @@
 #import "JSRemindViewController.h"
 #import "JSAboutViewController.h"
 
-#import "JSLoginViewController.h"
 
 #import "JSTabBarViewController.h"
 @implementation JSAppDelegate
@@ -25,15 +24,11 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
-    if ([JSUser isLogin]) {
+
         JSTabBarViewController *tabbarVC = [[JSTabBarViewController alloc] init];
         tabbarVC.viewControllers = @[[[JSMainViewController alloc] init],[[JSFamilyViewController alloc] init],[[JSRemindViewController alloc] init] ,[[JSAboutViewController alloc] init]];
         self.window.rootViewController = tabbarVC;
-    }else{
-        JSLoginViewController *loginVC = [[JSLoginViewController alloc] init];
-        self.window.rootViewController = loginVC;
-    }
+    
     
     return YES;
 }

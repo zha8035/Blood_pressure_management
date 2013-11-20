@@ -139,14 +139,16 @@
     familyNumbersArray = [JSUser familyNumbersArray];
     
     [dataTableView reloadData];
-}
--(void)viewDidAppear:(BOOL)animated
-{
     if (familyNumbersArray.count == 0) {
-        JSAddFamilyViewController *addFamilyVC = [[JSAddFamilyViewController alloc] init];
-        [self presentViewController:addFamilyVC animated:YES completion:nil];
+        [self performSelector:@selector(addFamilyNumber) withObject:nil afterDelay:1];
     }
 }
+-(void)addFamilyNumber
+{
+    JSAddFamilyViewController *addFamilyVC = [[JSAddFamilyViewController alloc] init];
+    [self presentViewController:addFamilyVC animated:YES completion:nil];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

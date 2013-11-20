@@ -19,4 +19,10 @@
 +(void)deleteFamilyNumberWithName:(NSString *)name;
 
 +(void)addBlood2FamilyNumberWithName:(NSString *)name andWithData:(NSString *)str;
+
++(BOOL)loginWithName:(NSString *)name andWithPassword:(NSString *)password;
+
++(BOOL)registerWithUserData:(NSDictionary *)data;
+
++(void)logout;
 @end

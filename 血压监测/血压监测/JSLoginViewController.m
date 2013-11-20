@@ -8,12 +8,8 @@
 
 #import "JSLoginViewController.h"
 #import "PNColor.h"
-#import "JSTabBarViewController.h"
-#import "JSMainViewController.h"
-#import "JSFamilyViewController.h"
-#import "JSRemindViewController.h"
-#import "JSAboutViewController.h"
 #import "JSRegisterViewController.h"
+#import "JSUser.h"
 @interface JSLoginViewController ()
 {
     float posiY;
@@ -84,14 +80,15 @@
 }
 -(void)loginButtonClick
 {
-//    if (userNameTextField.text.length == 0 || passwordTextField.text.length == 0) {
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"输入信息不合法" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
-//        [alert show];
-//        return;
-//    }
-    JSTabBarViewController *tabbarVC = [[JSTabBarViewController alloc] init];
-    tabbarVC.viewControllers = @[[[JSMainViewController alloc] init],[[JSFamilyViewController alloc] init],[[JSRemindViewController alloc] init] ,[[JSAboutViewController alloc] init]];
-    [self presentViewController:tabbarVC animated:YES completion:nil];
+    if (userNameTextField.text.length>0&&passwordTextField.text.length>0) {
+        if ([JSUser loginWithName:userNameTextField.text andWithPassword:passwordTextField.text]) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请先填写完成基本信息" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        [alert show];
+    }
+    
 }
 -(void)registerButtonClick
 {
