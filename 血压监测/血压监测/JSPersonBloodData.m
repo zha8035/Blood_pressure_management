@@ -19,7 +19,8 @@
     peopleBloodData.hight = [data objectAtIndex:4];
     peopleBloodData.weight = [data objectAtIndex:5];
     peopleBloodData.bloodArray = [data objectAtIndex:6];
-    peopleBloodData.bloodPressureArray = [data objectAtIndex:7];
+    peopleBloodData.lowBloodPressureArray = [data objectAtIndex:7];
+    peopleBloodData.highBloodPressureArray = [data objectAtIndex:8];
     return peopleBloodData;
 }
 @end

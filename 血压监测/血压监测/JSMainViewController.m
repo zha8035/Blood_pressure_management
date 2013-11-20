@@ -11,6 +11,7 @@
 #import "PNColor.h"
 #import "JSUser.h"
 #import "JSPersonBloodData.h"
+#import "JSAddDataViewController.h"
 #define tableviewSectionTitleHeight 50
 
 @interface JSMainViewController ()
@@ -36,7 +37,7 @@
     
     [super viewDidLoad];
     
-    familyNumbersArray = [JSUser familyNumbersArray];
+    
     
     dataTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.titleLab.frame.origin.y+65, self.view.frame.size.width, self.view.frame.size.height-(self.titleLab.frame.origin.y+65))];
     dataTableView.backgroundColor = [UIColor clearColor];
@@ -54,7 +55,14 @@
     [addButton setBackgroundImage:[UIImage imageNamed:@"menubg"] forState:UIControlStateNormal];
     [addButton setTitleColor:PNGreen forState:UIControlStateNormal];
     addButton.titleLabel.font = [UIFont fontWithName:@"Avenir-Medium" size:43.0];
+    [addButton addTarget:self action:@selector(addButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:addButton];
+}
+-(void)addButtonClick
+{
+    JSAddDataViewController *addVc = [[JSAddDataViewController alloc] init];
+    [addVc setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+    [self presentViewController:addVc animated:YES completion:nil];
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
@@ -120,9 +128,11 @@
     }
     return cell;
 }
--(void)viewDidAppear:(BOOL)animated
+-(void)viewWillAppear:(BOOL)animated
 {
     self.titleLab.text = @"首页";
+    familyNumbersArray = [JSUser familyNumbersArray];
+    [dataTableView reloadData];
 }
 - (void)didReceiveMemoryWarning
 {

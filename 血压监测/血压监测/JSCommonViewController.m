@@ -29,6 +29,11 @@
         self.titleLab.textColor = [UIColor whiteColor];
         self.titleLab.textAlignment = NSTextAlignmentCenter;
         [self.view addSubview:self.titleLab];
+        
+        
+        UIImageView *lineImageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 38, 300, 2)];
+        lineImageView.image = [UIImage imageNamed:@"line_bg"];
+        [self.titleLab addSubview:lineImageView];
     }
     return self;
 }

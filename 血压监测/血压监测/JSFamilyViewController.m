@@ -64,6 +64,7 @@
     if (cell == Nil) {
         cell = [[JSFamilyNumberCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Cell];
         cell.delegate = self;
+        cell.isCanRemove = YES;
     }
     JSPersonBloodData *data = [JSPersonBloodData initWithData:[familyNumbersArray objectAtIndex:indexPath.row]];
     [cell upCellDataWith:data];

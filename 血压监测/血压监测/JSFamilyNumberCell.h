@@ -15,5 +15,6 @@
 @end
 @interface JSFamilyNumberCell : UITableViewCell
 @property (nonatomic,weak) id<JSFanmilyCellDelegate>delegate;
+@property (nonatomic,assign) BOOL isCanRemove;
 -(void)upCellDataWith:(JSPersonBloodData *)data;
 @end

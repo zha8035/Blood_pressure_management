@@ -20,13 +20,14 @@
     
     UIActionSheet *headSelectSheet;
     BOOL isCanSave;
-    UIButton *addButton;
     
     UITextField *nameTextField;
     UITextField *sexTextField;
     UITextField *ageTextField;
     UITextField *hightTextField;
     UITextField *weightTextField;
+    
+    UIActionSheet *sexActionSheet;
 }
 @end
 
@@ -40,21 +41,25 @@
     }
     return self;
 }
--(void)viewDidAppear:(BOOL)animated
+-(void)viewWillAppear:(BOOL)animated
 {
     self.titleLab.text = @"添加成员";
     if (self.personData) {
         [headImageView setBackgroundImage:[UIImage imageNamed:self.personData.headUrl] forState:UIControlStateNormal];
+        headImageName = self.personData.headUrl;
         nameTextField.text = self.personData.name;
         ageTextField.text = self.personData.age;
         sexTextField.text = self.personData.sex;
         weightTextField.text = self.personData.weight;
         hightTextField.text = self.personData.hight;
+        
+        isCanSave = YES;
     }
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     headImageName = @"headImage0";
     
     UIView *headBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 120, 120)];
@@ -75,7 +80,7 @@
     NSArray *titles = @[@"成员姓名",@"性别",@"年龄",@"身高",@"重量"];
     for (int  i=0; i<titles.count; i++) {
         
-        UILabel *tiLab = [[UILabel alloc] initWithFrame:CGRectMake(0, self.titleLab.frame.origin.y+225+50*i, 90, 20)];
+        UILabel *tiLab = [[UILabel alloc] initWithFrame:CGRectMake(0, self.titleLab.frame.origin.y+205+50*i, 90, 20)];
         tiLab.text = [titles objectAtIndex:i];
         tiLab.textColor = PNGreen;
         tiLab.font = [UIFont boldSystemFontOfSize:20];
@@ -83,14 +88,14 @@
         tiLab.textAlignment = NSTextAlignmentRight;
         [self.view addSubview:tiLab];
         
-        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(100, self.titleLab.frame.origin.y+210+50*i, 200, 40)];
+        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(100, self.titleLab.frame.origin.y+190+50*i, 200, 40)];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.placeholder = [NSString stringWithFormat:@"点击输入%@",[titles objectAtIndex:i]];
         textField.tag = i;
         [textField setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
-        if (i<3) {
+        
             [textField addTarget:self action:@selector(textFieldBeginEdit:) forControlEvents:UIControlEventEditingDidBegin];
-        }
+        
         
         if (i>0) {
             textField.keyboardType = UIKeyboardTypeNumberPad;
@@ -100,6 +105,10 @@
             nameTextField = textField;
         }else if(i == 1){
             sexTextField = textField;
+            sexTextField.enabled = NO;
+            UIButton *sexButton = [[UIButton alloc] initWithFrame:sexTextField.frame];
+            [sexButton addTarget:self action:@selector(sexButtonClick) forControlEvents:UIControlEventTouchUpInside];
+            [self.view addSubview:sexButton];
         }else if(i == 2){
             ageTextField = textField;
         }else if(i == 3){
@@ -109,26 +118,98 @@
         }
     }
     
-    addButton = [[UIButton alloc] initWithFrame:CGRectMake(20,60, 40, 40)];
+    UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(10,20, 60, 35)];
+    backButton.layer.cornerRadius = 5;
+    backButton.layer.masksToBounds = YES;
+    backButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    backButton.layer.borderWidth = 2;
+    [backButton setTitle:@"返回" forState:UIControlStateNormal];
+    [backButton setBackgroundImage:[UIImage imageNamed:@"menubg"] forState:UIControlStateNormal];
+    [backButton setTitleColor:PNGreen forState:UIControlStateNormal];
+    backButton.titleLabel.font = [UIFont fontWithName:@"Avenir-Medium" size:20.0];
+    [backButton addTarget:self action:@selector(backButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:backButton];
+    
+    
+    UIButton *addButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 120, 40, 40)];
     addButton.layer.cornerRadius = 20;
     addButton.layer.masksToBounds = YES;
     addButton.layer.borderColor = [UIColor whiteColor].CGColor;
     addButton.layer.borderWidth = 2;
-    [addButton setTitle:@"←" forState:UIControlStateNormal];
+    [addButton setTitle:@"+" forState:UIControlStateNormal];
     [addButton setBackgroundImage:[UIImage imageNamed:@"menubg"] forState:UIControlStateNormal];
-    [addButton addTarget:self action:@selector(addButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [addButton setTitleColor:PNGreen forState:UIControlStateNormal];
-    addButton.titleLabel.font = [UIFont fontWithName:@"Avenir-Medium" size:33.0];
+    addButton.titleLabel.font = [UIFont fontWithName:@"Avenir-Medium" size:43.0];
+    [addButton addTarget:self action:@selector(addButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:addButton];
 }
-
+//选取xingbie
+-(void)sexButtonClick
+{
+    if (sexActionSheet == Nil) {
+        sexActionSheet = [[UIActionSheet alloc] initWithTitle:@"\n\n\n\n" delegate:nil cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles: nil];
+        UIImageView *imageView=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 300)];
+        imageView.image = [UIImage imageNamed:@"menubg"];
+        [sexActionSheet addSubview:imageView];
+        
+        NSArray *titles = @[@"2",@"4"];
+        for (int i=0; i<titles.count; i++) {
+            
+            UIView *headBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
+            headBgView.center = CGPointMake(120+95*i, 50);
+            headBgView.layer.cornerRadius = 40;
+            headBgView.layer.masksToBounds = YES;
+            headBgView.layer.borderWidth = 2;
+            headBgView.layer.borderColor = PNGreen.CGColor;
+            headBgView.backgroundColor = [UIColor whiteColor];
+            [sexActionSheet addSubview:headBgView];
+            
+            UIButton *headView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
+            [headView addTarget:self action:@selector(selectSexButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+            headView.tag = i;
+            headView.center = headBgView.center;
+            [headView setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"headImage%@",[titles objectAtIndex:i]]] forState:UIControlStateNormal];
+            [sexActionSheet addSubview:headView];
+        }
+        
+        UIButton *cancelButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 10, 30, 100)];
+        [cancelButton addTarget:self action:@selector(cancelButtonClick) forControlEvents:UIControlEventTouchUpInside];
+        cancelButton.backgroundColor = PNGreen;
+        [sexActionSheet addSubview:cancelButton];
+        
+        UILabel *lab = [[UILabel alloc] initWithFrame:cancelButton.bounds];
+        lab.text = @"取\n消";
+        lab.font = [UIFont boldSystemFontOfSize:20];
+        lab.textColor = [UIColor whiteColor];
+        lab.numberOfLines = 0;
+        lab.backgroundColor = [UIColor clearColor];
+        [cancelButton addSubview:lab];
+    }
+    [sexActionSheet showInView:self.view];
+}
+//性别
+-(void)selectSexButtonClick:(UIButton *)button
+{
+    NSArray *sexs = @[@"男",@"女"];
+    sexTextField.text = [sexs objectAtIndex:button.tag];
+    [sexActionSheet dismissWithClickedButtonIndex:0 animated:YES];
+}
+-(void)backButtonClick
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 -(void)addButtonClick
 {
     if (isCanSave) {
-        NSArray *array = @[headImageName,nameTextField.text,sexTextField.text,ageTextField.text,hightTextField.text,weightTextField.text,[[NSArray alloc] init],[[NSArray alloc] init]];
+        NSArray *array = @[headImageName,nameTextField.text,sexTextField.text,ageTextField.text,hightTextField.text,weightTextField.text,[[NSArray alloc] init],[[NSArray alloc] init],[[NSArray alloc] init],[[NSArray alloc] init]];
         [JSUser addFamilyNumber:array];
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请先填写完成基本信息" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        [alert show];
     }
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 - (void)headButtonClick
 {
@@ -173,11 +254,13 @@
         lab.backgroundColor = [UIColor clearColor];
         [cancelButton addSubview:lab];
     }
+    [self touchesBegan:nil withEvent:nil];
     [headSelectSheet showInView:self.view];
 }
 -(void)cancelButtonClick
 {
     [headSelectSheet dismissWithClickedButtonIndex:0 animated:YES];
+    [sexActionSheet dismissWithClickedButtonIndex:0 animated:YES];
 }
 -(void)selectHeadButtonClick:(UIButton *)button
 {
@@ -205,16 +288,9 @@
     frame.origin.y = posiY;
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.view.frame = frame;
-        addButton.alpha = 0;
     } completion:^(BOOL finished) {
-        if (isCanSave) {
-            [addButton setTitle:@"+" forState:UIControlStateNormal];
-        }else{
-            [addButton setTitle:@"←" forState:UIControlStateNormal];
-        }
-        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            addButton.alpha = 1;
-        } completion:nil];
+
+        
     }];
 }
 //编辑开始
@@ -225,7 +301,12 @@
         posiY = self.view.frame.origin.y;
     }
     CGRect frame = self.view.frame;
-    frame.origin.y = -50*(textField.tag+1);
+    if (textField.tag == 4) {
+        frame.origin.y = -47*(textField.tag);
+    }else{
+        frame.origin.y = -47*(textField.tag+1);
+    }
+    
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.view.frame = frame;
     } completion:^(BOOL finished) {

@@ -79,6 +79,9 @@
 }
 -(void)swipeTheCell:(UISwipeGestureRecognizer *)swipe
 {
+    if (!self.isCanRemove) {
+        return;
+    }
     switch (swipe.direction) {
         case UISwipeGestureRecognizerDirectionRight:
         {

@@ -13,6 +13,7 @@
 #import "JSFamilyViewController.h"
 #import "JSRemindViewController.h"
 #import "JSAboutViewController.h"
+#import "JSRegisterViewController.h"
 @interface JSLoginViewController ()
 {
     float posiY;
@@ -61,6 +62,9 @@
     }
     UIButton *loginButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 40)];
     loginButton.layer.cornerRadius =5;
+//    loginButton.layer.borderWidth = 2;
+//    loginButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    loginButton.titleLabel.font = [UIFont boldSystemFontOfSize:23];
     [loginButton setTitle:@"登录" forState:UIControlStateNormal];
     loginButton.layer.backgroundColor = PNGreen.CGColor;
     loginButton.center = CGPointMake(160, 250);
@@ -69,7 +73,10 @@
     
     UIButton *registerButton = [[UIButton alloc] initWithFrame:CGRectMake(250, self.view.frame.size.height-50, 100, 40)];
     registerButton.layer.cornerRadius = 20;
-    [registerButton setTitle:@"注册" forState:UIControlStateNormal];
+//    registerButton.layer.borderColor = [UIColor whiteColor].CGColor;
+//    registerButton.layer.borderWidth =2;
+    registerButton.titleLabel.font = [UIFont boldSystemFontOfSize:23];
+    [registerButton setTitle:@"注册 " forState:UIControlStateNormal];
     registerButton.layer.backgroundColor = PNBlue.CGColor;
     [registerButton addTarget:self action:@selector(registerButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:registerButton];
@@ -77,18 +84,20 @@
 }
 -(void)loginButtonClick
 {
-    if (userNameTextField.text.length == 0 || passwordTextField.text.length == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"输入信息不合法" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
-        [alert show];
-        return;
-    }
+//    if (userNameTextField.text.length == 0 || passwordTextField.text.length == 0) {
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"输入信息不合法" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+//        [alert show];
+//        return;
+//    }
     JSTabBarViewController *tabbarVC = [[JSTabBarViewController alloc] init];
     tabbarVC.viewControllers = @[[[JSMainViewController alloc] init],[[JSFamilyViewController alloc] init],[[JSRemindViewController alloc] init] ,[[JSAboutViewController alloc] init]];
     [self presentViewController:tabbarVC animated:YES completion:nil];
 }
 -(void)registerButtonClick
 {
-    
+    JSRegisterViewController *registerVC = [[JSRegisterViewController alloc] init];
+    registerVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:registerVC animated:YES completion:nil];
 }
 -(void)viewDidAppear:(BOOL)animated
 {
