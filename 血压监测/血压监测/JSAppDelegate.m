@@ -24,10 +24,11 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-
-        JSTabBarViewController *tabbarVC = [[JSTabBarViewController alloc] init];
-        tabbarVC.viewControllers = @[[[JSMainViewController alloc] init],[[JSFamilyViewController alloc] init],[[JSRemindViewController alloc] init] ,[[JSAboutViewController alloc] init]];
-        self.window.rootViewController = tabbarVC;
+    [JSUser ChangeData];
+    
+    JSTabBarViewController *tabbarVC = [[JSTabBarViewController alloc] init];
+    tabbarVC.viewControllers = @[[[JSMainViewController alloc] init],[[JSFamilyViewController alloc] init],[[JSRemindViewController alloc] init] ,[[JSAboutViewController alloc] init]];
+    self.window.rootViewController = tabbarVC;
     
     
     return YES;

@@ -206,7 +206,10 @@
         NSArray *array = @[headImageName,nameTextField.text,sexTextField.text,ageTextField.text,hightTextField.text,weightTextField.text,@[[NSString stringWithFormat:@"0%@0%@0%@ ",SEP,SEP,SEP],[NSString stringWithFormat:@"0%@0%@0%@ ",SEP,SEP,SEP],[NSString stringWithFormat:@"0%@0%@0%@ ",SEP,SEP,SEP],[NSString stringWithFormat:@"0%@0%@0%@ ",SEP,SEP,SEP],[NSString stringWithFormat:@"0%@0%@0%@ ",SEP,SEP,SEP]]];
         [JSUser addFamilyNumber:array];
         
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self dismissViewControllerAnimated:YES completion:^{
+            [JSUser ChangeData];
+        }];
+        
     }else{
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请先填写完成基本信息" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
         [alert show];

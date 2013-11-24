@@ -19,6 +19,7 @@
 +(void)logout{
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"accountDic"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    [self ChangeData];
 }
 +(BOOL)loginWithName:(NSString *)name andWithPassword:(NSString *)password
 {
@@ -108,12 +109,27 @@
     NSMutableDictionary *a = [NSMutableDictionary dictionaryWithDictionary:[[NSUserDefaults standardUserDefaults] valueForKey:key]];
     if (a) {
         NSMutableDictionary *dataDic = [NSMutableDictionary dictionaryWithDictionary:[a objectForKey:name]];
-        NSMutableArray *dataArray = [dataDic objectForKey:@"dataArray"];
+        
+        NSMutableArray *dataArray = [NSMutableArray arrayWithArray:[dataDic objectForKey:@"dataArray"]];
         [dataArray insertObject:str atIndex:0];
+        [dataDic setValue:dataArray forKey:@"dataArray"];
         [a setValue:dataDic forKey:name];
         
         [[NSUserDefaults standardUserDefaults] setValue:a forKey:key];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
+}
++(void)ChangeData
+{
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isChangeData"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
++(BOOL)isChangeData
+{
+    if ([[NSUserDefaults standardUserDefaults] valueForKey:@"isChangeData"]) {
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"isChangeData"];
+        return YES;
+    }
+    return NO;
 }
 @end

@@ -7,12 +7,12 @@
 //
 
 #import "JSMainViewController.h"
-#import "JSBloodDataCell.h"
 #import "PNColor.h"
 #import "JSUser.h"
 #import "JSPersonBloodData.h"
 #import "JSAddDataViewController.h"
 #import "JSAddFamilyViewController.h"
+#import "JSDetailViewController.h"
 #define tableviewSectionTitleHeight 50
 
 @interface JSMainViewController ()
@@ -126,29 +126,40 @@
 {
     
     JSBloodDataCell *cell = [[JSBloodDataCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellIdentify"];
+    cell.delegate = self;
 //    if (cell == nil) {
 //        cell = [[JSBloodDataCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Cell];
 //    }
     JSPersonBloodData *data = [JSPersonBloodData initWithData:[familyNumbersArray objectAtIndex:indexPath.section]];
     [cell upCellDataWithPersonData:data];
+    cell.tag = indexPath.section;
     return cell;
 }
 -(void)viewWillAppear:(BOOL)animated
 {
     self.titleLab.text = @"首页";
-    familyNumbersArray = [JSUser familyNumbersArray];
-    
-    [dataTableView reloadData];
-    if (familyNumbersArray.count == 0) {
-        [self performSelector:@selector(addFamilyNumber) withObject:nil afterDelay:1];
+    if ([JSUser isChangeData]) {
+        familyNumbersArray = [JSUser familyNumbersArray];
+        [dataTableView reloadData];
+        if (familyNumbersArray.count == 0) {
+            [self performSelector:@selector(addFamilyNumber) withObject:nil afterDelay:1];
+        }
     }
+    
 }
 -(void)addFamilyNumber
 {
     JSAddFamilyViewController *addFamilyVC = [[JSAddFamilyViewController alloc] init];
     [self presentViewController:addFamilyVC animated:YES completion:nil];
 }
-
+-(void)selectCellWithIndex:(NSInteger)section
+{
+    return;
+    JSPersonBloodData *data = [JSPersonBloodData initWithData:[familyNumbersArray objectAtIndex:section]];
+    JSDetailViewController *detailVC = [[JSDetailViewController alloc] init];
+    detailVC.personData = data;
+    [self presentViewController:detailVC animated:YES completion:nil];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

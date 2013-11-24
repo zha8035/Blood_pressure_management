@@ -31,9 +31,9 @@
         [self.view addSubview:self.titleLab];
         
         
-//        UIImageView *lineImageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 38, 300, 2)];
-//        lineImageView.image = [UIImage imageNamed:@"line_bg"];
-//        [self.titleLab addSubview:lineImageView];
+        UIImageView *lineImageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 38, 300, 2)];
+        lineImageView.image = [UIImage imageNamed:@"line_bg"];
+        [self.titleLab addSubview:lineImageView];
 //        
 //        UIImage *noDataImage = [UIImage imageNamed:@"nodata"];
 //        _noDataImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200*noDataImage.size.height/noDataImage.size.width)];

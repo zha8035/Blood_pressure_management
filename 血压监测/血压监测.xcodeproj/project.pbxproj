@@ -11,6 +11,8 @@
 		CE31506E183C458200D0FB0A /* 返回@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE31506D183C458200D0FB0A /* 返回@2x.png */; };
 		CE315071183C4D3100D0FB0A /* JSRemindCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE315070183C4D3100D0FB0A /* JSRemindCell.m */; };
 		CE315073183C5F1E00D0FB0A /* colorbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE315072183C5F1E00D0FB0A /* colorbar@2x.png */; };
+		CE5224AF18419DCC00C4F5A5 /* XYPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5224AE18419DCC00C4F5A5 /* XYPieChart.m */; };
+		CE6A63F4183D0488008222CC /* JSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6A63F3183D0488008222CC /* JSDetailViewController.m */; };
 		CE7947CE183A09BB00965A56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7947CD183A09BB00965A56 /* Foundation.framework */; };
 		CE7947D0183A09BB00965A56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7947CF183A09BB00965A56 /* CoreGraphics.framework */; };
 		CE7947D2183A09BB00965A56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7947D1183A09BB00965A56 /* UIKit.framework */; };
@@ -89,6 +91,10 @@
 		CE31506F183C4D3100D0FB0A /* JSRemindCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRemindCell.h; sourceTree = "<group>"; };
 		CE315070183C4D3100D0FB0A /* JSRemindCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRemindCell.m; sourceTree = "<group>"; };
 		CE315072183C5F1E00D0FB0A /* colorbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "colorbar@2x.png"; sourceTree = "<group>"; };
+		CE5224AD18419DCC00C4F5A5 /* XYPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPieChart.h; sourceTree = "<group>"; };
+		CE5224AE18419DCC00C4F5A5 /* XYPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPieChart.m; sourceTree = "<group>"; };
+		CE6A63F2183D0488008222CC /* JSDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDetailViewController.h; sourceTree = "<group>"; };
+		CE6A63F3183D0488008222CC /* JSDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDetailViewController.m; sourceTree = "<group>"; };
 		CE7947CA183A09BB00965A56 /* 血压监测.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "血压监测.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7947CD183A09BB00965A56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE7947CF183A09BB00965A56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -222,9 +228,28 @@
 			name = login;
 			sourceTree = "<group>";
 		};
+		CE5224AC18419DCC00C4F5A5 /* XYPieChart */ = {
+			isa = PBXGroup;
+			children = (
+				CE5224AD18419DCC00C4F5A5 /* XYPieChart.h */,
+				CE5224AE18419DCC00C4F5A5 /* XYPieChart.m */,
+			);
+			path = XYPieChart;
+			sourceTree = "<group>";
+		};
+		CE6A63F1183D0470008222CC /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				CE6A63F2183D0488008222CC /* JSDetailViewController.h */,
+				CE6A63F3183D0488008222CC /* JSDetailViewController.m */,
+			);
+			name = detail;
+			sourceTree = "<group>";
+		};
 		CE7947C1183A09BB00965A56 = {
 			isa = PBXGroup;
 			children = (
+				CE5224AC18419DCC00C4F5A5 /* XYPieChart */,
 				CE79485A183A46BF00965A56 /* images */,
 				CE794838183A0C3600965A56 /* common */,
 				CE7947D3183A09BB00965A56 /* 血压监测 */,
@@ -360,6 +385,7 @@
 		CE79483A183A0C5300965A56 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				CE6A63F1183D0470008222CC /* detail */,
 				CE315069183C452200D0FB0A /* login */,
 				CEA2539C183B86280031BA3E /* addData */,
 				CE927284183B0D2900D638EA /* family */,
@@ -567,10 +593,12 @@
 				CEA2539F183B863C0031BA3E /* JSAddDataViewController.m in Sources */,
 				CE79483E183A0C7800965A56 /* JSCommonViewController.m in Sources */,
 				CE794832183A0C1500965A56 /* PNBar.m in Sources */,
+				CE6A63F4183D0488008222CC /* JSDetailViewController.m in Sources */,
 				CE79486A183A575600965A56 /* JSLoginViewController.m in Sources */,
 				CE92727F183B0ABF00D638EA /* JSAddFamilyViewController.m in Sources */,
 				CE794861183A493100965A56 /* JSPersonBloodData.m in Sources */,
 				CE79485E183A477D00965A56 /* JSBloodData.m in Sources */,
+				CE5224AF18419DCC00C4F5A5 /* XYPieChart.m in Sources */,
 				CE79489B183A707600965A56 /* JSRemindViewController.m in Sources */,
 				CE79486E183A57A400965A56 /* JSUser.m in Sources */,
 				CE794898183A704B00965A56 /* JSFamilyViewController.m in Sources */,

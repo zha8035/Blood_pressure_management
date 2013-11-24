@@ -141,6 +141,7 @@
 }
 -(void)addButtonClick
 {
+    [self touchesBegan:nil withEvent:nil];
     if (!isCanSave||![passwordTextField.text isEqualToString:rePasswordTextField.text]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请先填写完成基本信息" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
         [alert show];

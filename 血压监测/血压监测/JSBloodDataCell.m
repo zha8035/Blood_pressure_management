@@ -177,16 +177,21 @@
         pageControl.center = CGPointMake(self.frame.size.width/2, cellHight-10);
         [self addSubview:pageControl];
 
+        
+        [myScrollView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapTheCell)]];
     }
     return self;
 }
-
+-(void)tapTheCell
+{
+    [self.delegate selectCellWithIndex:self.tag];
+}
 -(void)upCellDataWithPersonData:(JSPersonBloodData *)data
 {
     NSArray *dataArray = data.dataArray;
    
     highLabel.text = [[[dataArray objectAtIndex:0] componentsSeparatedByString:SEP] objectAtIndex:0];
-    if ([highLabel.text intValue] > 160) {
+    if ([highLabel.text intValue] > 150) {
         highLayer.backgroundColor = PNRed.CGColor;
     }else if([highLabel.text intValue] < 90){
         highLayer.backgroundColor = PNBlue.CGColor;

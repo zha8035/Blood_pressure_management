@@ -313,12 +313,15 @@
     resultLowLab.text = lowTextField.text;
     resultBloodLab.text = bloodTextField.text;
     resultTimeLab.text = timeTextField.text;
-    if ([resultHighLab.text intValue] > 160) {
+    if ([resultHighLab.text intValue] > 150) {
         resultLab.text = @"偏高";
+        resultLab.backgroundColor = PNRed;
     }else if([resultLowLab.text intValue] < 60){
         resultLab.text = @"偏低";
+        resultLab.backgroundColor = PNBlue;
     }else{
         resultLab.text = @"正常";
+        resultLab.backgroundColor = PNGreen;
     }
     //////////
     CGRect frame = dataTableView.frame;
@@ -337,7 +340,9 @@
 {
     NSString *str = [NSString stringWithFormat:@"%@%@%@%@%@%@%f",highTextField.text,SEP,lowTextField.text,SEP,bloodTextField.text,SEP,[[NSDate date] timeIntervalSince1970]];
     [JSUser addBlood2FamilyNumberWithName:nameLab.text andWithData:str];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+        [JSUser ChangeData];
+    }];
 }
 -(void)backButtonClick
 {

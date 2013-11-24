@@ -71,6 +71,7 @@
 -(void)tabTitleButtonClick:(UIButton *)button
 {
     if (button.tag == 3) {
+        self.selectedIndex = 0;
         [JSUser logout];
         JSLoginViewController *loginVC = [[JSLoginViewController alloc] init];
         [self.selectedViewController presentViewController:loginVC animated:YES completion:nil];

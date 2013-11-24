@@ -41,7 +41,7 @@
     [self.view addSubview:dataTableView];
     
 }
--(void)viewDidAppear:(BOOL)animated
+-(void)viewWillAppear:(BOOL)animated
 {
     self.titleLab.text = @"家庭成员";
     familyNumbersArray = [JSUser familyNumbersArray];

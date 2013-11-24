@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSMainViewController.m"
-            timestampString = "406634739.715227"
+            timestampString = "406653221.958671"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSAddFamilyViewController.m"
-            timestampString = "406634739.715227"
+            timestampString = "406705263.214146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300"
+            startingLineNumber = "303"
+            endingLineNumber = "303"
             landmarkName = "-textFieldBeginEdit:"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSAddFamilyViewController.m"
-            timestampString = "406634739.715227"
+            timestampString = "406705263.214146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "312"
-            endingLineNumber = "312"
+            startingLineNumber = "315"
+            endingLineNumber = "315"
             landmarkName = "-textFieldBeginEdit:"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSAddFamilyViewController.m"
-            timestampString = "406634739.715227"
+            timestampString = "406705263.214146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "275"
-            endingLineNumber = "275"
+            startingLineNumber = "278"
+            endingLineNumber = "278"
             landmarkName = "-touchesBegan:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSAddFamilyViewController.m"
-            timestampString = "406634739.715227"
+            timestampString = "406705263.214146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "219"
-            endingLineNumber = "219"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
             landmarkName = "-headButtonClick"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSAddFamilyViewController.m"
-            timestampString = "406634739.715227"
+            timestampString = "406705263.214146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
             landmarkName = "-selectHeadButtonClick:"
             landmarkType = "5">
          </BreakpointContent>
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSUser.m"
-            timestampString = "406643476.727106"
+            timestampString = "406954933.677323"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "+familyNumbersArray"
             landmarkType = "5">
          </BreakpointContent>
@@ -250,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSMainViewController.m"
-            timestampString = "406634739.715227"
+            timestampString = "406653221.958671"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "115"
@@ -314,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSMainViewController.m"
-            timestampString = "406636486.057556"
+            timestampString = "406705263.214146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -330,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSAddDataViewController.m"
-            timestampString = "406640247.424319"
+            timestampString = "406705263.214146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "414"
-            endingLineNumber = "414"
+            startingLineNumber = "419"
+            endingLineNumber = "419"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -378,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSAddDataViewController.m"
-            timestampString = "406640247.424319"
+            timestampString = "406645898.777562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "338"
-            endingLineNumber = "338"
+            startingLineNumber = "341"
+            endingLineNumber = "341"
             landmarkName = "-addDataButtonClick"
             landmarkType = "5">
          </BreakpointContent>
@@ -394,11 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSUser.m"
-            timestampString = "406643476.727106"
+            timestampString = "406954933.677323"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "+addFamilyNumber:"
             landmarkType = "5">
          </BreakpointContent>
@@ -410,11 +410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSUser.m"
-            timestampString = "406643476.727106"
+            timestampString = "406954933.677323"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "+addBlood2FamilyNumberWithName:andWithData:"
             landmarkType = "5">
          </BreakpointContent>
@@ -426,11 +426,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSUser.m"
-            timestampString = "406643476.727106"
+            timestampString = "406954933.677323"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "+addFamilyNumber:"
             landmarkType = "5">
          </BreakpointContent>
@@ -442,11 +442,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSUser.m"
-            timestampString = "406643476.727106"
+            timestampString = "406954933.677323"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "+familyNumbersArray"
             landmarkType = "5">
          </BreakpointContent>
@@ -458,11 +458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSMainViewController.m"
-            timestampString = "406636411.691603"
+            timestampString = "406653221.958671"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -474,11 +474,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSBloodDataCell.m"
-            timestampString = "406640578.446916"
+            timestampString = "406652416.550275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
             landmarkName = "-upCellDataWithPersonData:"
             landmarkType = "5">
             <Locations>
@@ -520,11 +520,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSBloodDataCell.m"
-            timestampString = "406640578.446916"
+            timestampString = "406652416.550275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "236"
-            endingLineNumber = "236"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
             landmarkName = "-upCellDataWithPersonData:"
             landmarkType = "5">
          </BreakpointContent>
@@ -536,11 +536,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSBloodDataCell.m"
-            timestampString = "406640578.446916"
+            timestampString = "406652416.550275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
             landmarkName = "-upCellDataWithPersonData:"
             landmarkType = "5">
          </BreakpointContent>
@@ -552,11 +552,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSBloodDataCell.m"
-            timestampString = "406640578.446916"
+            timestampString = "406652416.550275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "206"
-            endingLineNumber = "206"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
             landmarkName = "-upCellDataWithPersonData:"
             landmarkType = "5">
          </BreakpointContent>
@@ -568,11 +568,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSBloodDataCell.m"
-            timestampString = "406640578.446916"
+            timestampString = "406652416.550275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
             landmarkName = "-upCellDataWithPersonData:"
             landmarkType = "5">
          </BreakpointContent>
@@ -584,11 +584,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSMainViewController.m"
-            timestampString = "406643059.754111"
+            timestampString = "406705263.214146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -600,11 +600,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSUser.m"
-            timestampString = "406643476.727106"
+            timestampString = "406954933.677323"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "+addFamilyNumber:"
             landmarkType = "5">
          </BreakpointContent>
@@ -616,12 +616,416 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#34880;&#21387;&#30417;&#27979;/JSUser.m"
-            timestampString = "406643476.727106"
+            timestampString = "406954933.677323"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "+addBlood2FamilyNumberWithName:andWithData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#34880;&#21387;&#30417;&#27979;/JSAddDataViewController.m"
+            timestampString = "406645415.133932"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "316"
+            endingLineNumber = "316"
+            landmarkName = "-addButtonClick"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#34880;&#21387;&#30417;&#27979;/JSFamilyViewController.m"
+            timestampString = "406645590.113193"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "-viewWillAppear:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#34880;&#21387;&#30417;&#27979;/JSDetailViewController.m"
+            timestampString = "406954529.758044"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-backButtonClick"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#34880;&#21387;&#30417;&#27979;/JSDetailViewController.m"
+            timestampString = "406954436.688595"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#34880;&#21387;&#30417;&#27979;/JSMainViewController.m"
+            timestampString = "406954847.127192"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "-selectCellWithIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#34880;&#21387;&#30417;&#27979;/JSDetailViewController.m"
+            timestampString = "406954523.099921"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "-viewDidAppear:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JSDetailViewController viewDidAppear:]"
+                  moduleName = "&#34880;&#21387;&#30417;&#27979;"
+                  urlString = "file:///Users/user/Desktop/%E6%88%91%E7%9A%84code/%E8%A1%80%E5%8E%8B%E7%AE%A1%E7%90%86/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/JSDetailViewController.m"
+                  timestampString = "406954531.363741"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JSDetailViewController viewDidAppear:]"
+                  moduleName = "&#34880;&#21387;&#30417;&#27979;"
+                  urlString = "file:///Users/user/Desktop/%E6%88%91%E7%9A%84code/%E8%A1%80%E5%8E%8B%E7%AE%A1%E7%90%86/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/JSDetailViewController.m"
+                  timestampString = "406954529.769124"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "510">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JSDetailViewController viewDidAppear:]"
+                  moduleName = "&#34880;&#21387;&#30417;&#27979;"
+                  urlString = "file:///Users/user/Desktop/%E6%88%91%E7%9A%84code/%E8%A1%80%E5%8E%8B%E7%AE%A1%E7%90%86/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/JSDetailViewController.m"
+                  timestampString = "406954531.364183"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "504">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#34880;&#21387;&#30417;&#27979;/JSDetailViewController.m"
+            timestampString = "406954567.549319"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "-viewDidAppear:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JSDetailViewController viewDidAppear:]"
+                  moduleName = "&#34880;&#21387;&#30417;&#27979;"
+                  urlString = "file:///Users/user/Desktop/%E6%88%91%E7%9A%84code/%E8%A1%80%E5%8E%8B%E7%AE%A1%E7%90%86/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/JSDetailViewController.m"
+                  timestampString = "406954757.581762"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "558">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JSDetailViewController viewDidAppear:]"
+                  moduleName = "&#34880;&#21387;&#30417;&#27979;"
+                  urlString = "file:///Users/user/Desktop/%E6%88%91%E7%9A%84code/%E8%A1%80%E5%8E%8B%E7%AE%A1%E7%90%86/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/JSDetailViewController.m"
+                  timestampString = "406954759.226166"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "552">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#34880;&#21387;&#30417;&#27979;/JSDetailViewController.m"
+            timestampString = "406954582.667921"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "-numberOfSlicesInPieChart:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#34880;&#21387;&#30417;&#27979;/JSDetailViewController.m"
+            timestampString = "406954583.841058"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "-pieChart:valueForSliceAtIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#34880;&#21387;&#30417;&#27979;/JSDetailViewController.m"
+            timestampString = "406954602.667985"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "-pieChart:colorForSliceAtIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#34880;&#21387;&#30417;&#27979;/JSDetailViewController.m"
+            timestampString = "406954621.553259"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
             endingLineNumber = "107"
-            landmarkName = "+addBlood2FamilyNumberWithName:andWithData:"
+            landmarkName = "-pieChart:valueForSliceAtIndex:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JSDetailViewController pieChart:valueForSliceAtIndex:]"
+                  moduleName = "&#34880;&#21387;&#30417;&#27979;"
+                  urlString = "file:///Users/user/Desktop/%E6%88%91%E7%9A%84code/%E8%A1%80%E5%8E%8B%E7%AE%A1%E7%90%86/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/JSDetailViewController.m"
+                  timestampString = "406954933.691709"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "396">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JSDetailViewController pieChart:valueForSliceAtIndex:]"
+                  moduleName = "&#34880;&#21387;&#30417;&#27979;"
+                  urlString = "file:///Users/user/Desktop/%E6%88%91%E7%9A%84code/%E8%A1%80%E5%8E%8B%E7%AE%A1%E7%90%86/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/JSDetailViewController.m"
+                  timestampString = "406954935.344802"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "402">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#34880;&#21387;&#30417;&#27979;/JSDetailViewController.m"
+            timestampString = "406954655.940542"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-pieChart:valueForSliceAtIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#34880;&#21387;&#30417;&#27979;/JSDetailViewController.m"
+            timestampString = "406954657.294263"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "-pieChart:valueForSliceAtIndex:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JSDetailViewController pieChart:valueForSliceAtIndex:]"
+                  moduleName = "&#34880;&#21387;&#30417;&#27979;"
+                  urlString = "file:///Users/user/Desktop/%E6%88%91%E7%9A%84code/%E8%A1%80%E5%8E%8B%E7%AE%A1%E7%90%86/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/JSDetailViewController.m"
+                  timestampString = "406954933.6921"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "198">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JSDetailViewController pieChart:valueForSliceAtIndex:]"
+                  moduleName = "&#34880;&#21387;&#30417;&#27979;"
+                  urlString = "file:///Users/user/Desktop/%E6%88%91%E7%9A%84code/%E8%A1%80%E5%8E%8B%E7%AE%A1%E7%90%86/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/JSDetailViewController.m"
+                  timestampString = "406954935.345846"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "200">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#34880;&#21387;&#30417;&#27979;/JSDetailViewController.m"
+            timestampString = "406954658.199466"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "-pieChart:valueForSliceAtIndex:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JSDetailViewController pieChart:valueForSliceAtIndex:]"
+                  moduleName = "&#34880;&#21387;&#30417;&#27979;"
+                  urlString = "file:///Users/user/Desktop/%E6%88%91%E7%9A%84code/%E8%A1%80%E5%8E%8B%E7%AE%A1%E7%90%86/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/JSDetailViewController.m"
+                  timestampString = "406954933.692258"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "296">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JSDetailViewController pieChart:valueForSliceAtIndex:]"
+                  moduleName = "&#34880;&#21387;&#30417;&#27979;"
+                  urlString = "file:///Users/user/Desktop/%E6%88%91%E7%9A%84code/%E8%A1%80%E5%8E%8B%E7%AE%A1%E7%90%86/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/%E8%A1%80%E5%8E%8B%E7%9B%91%E6%B5%8B/JSDetailViewController.m"
+                  timestampString = "406954935.34689"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "300">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#34880;&#21387;&#30417;&#27979;/JSUser.m"
+            timestampString = "406954933.677323"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "+familyNumbersArray"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

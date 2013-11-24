@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "JSPersonBloodData.h"
+@protocol JSBloodDataCellDelegate <NSObject>
+
+- (void)selectCellWithIndex:(NSInteger)section;
+
+@end
 @interface JSBloodDataCell : UITableViewCell<UIScrollViewDelegate>
+@property (nonatomic,weak) id<JSBloodDataCellDelegate>delegate;
 -(void)upCellDataWithPersonData:(JSPersonBloodData *)data;
 @end

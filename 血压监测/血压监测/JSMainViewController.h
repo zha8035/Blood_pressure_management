@@ -7,7 +7,7 @@
 //
 
 #import "JSCommonViewController.h"
-
-@interface JSMainViewController : JSCommonViewController<UITableViewDataSource,UITableViewDelegate>
+#import "JSBloodDataCell.h"
+@interface JSMainViewController : JSCommonViewController<UITableViewDataSource,UITableViewDelegate,JSBloodDataCellDelegate>
 
 @end

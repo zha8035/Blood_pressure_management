@@ -25,4 +25,7 @@
 +(BOOL)registerWithUserData:(NSDictionary *)data;
 
 +(void)logout;
+
++(void)ChangeData;
++(BOOL)isChangeData;
 @end
